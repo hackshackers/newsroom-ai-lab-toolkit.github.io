@@ -53,7 +53,7 @@ Let's see how to [Create a page](/create-a-page).
 Let's see how to [Create a page](./create-a-page.mdx).
 ```
 
-**Result:** Let's see how to [Create a page](./create-a-page.mdx).
+**Result:** Let's see how to [Create a page](./create-a-page.md).
 
 ## Images
 
@@ -143,8 +143,6 @@ export const Highlight = ({children, color}) => (
 );
 
 This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
-
-This is <Highlight color="#1877F2">Facebook blue</Highlight> !
 ```
 
 export const Highlight = ({children, color}) => (

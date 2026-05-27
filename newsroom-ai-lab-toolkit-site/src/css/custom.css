@@ -4,27 +4,47 @@
  * work well for content-centric websites.
  */
 
+
+h1, h2, h3, h4, h5, h6,
+.navbar {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Brand palette */
+:root {
+  --color-teal: #0db4ba;
+  --color-blue: #007fde;
+  --color-orange: #ff8853;
+  --color-light-grey: #e5e4e9;
+}
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #3c3946;
+  --ifm-color-primary-dark: #35323e;
+  --ifm-color-primary-darker: #2e2c35;
+  --ifm-color-primary-darkest: #24222a;
+  --ifm-color-primary-light: #43404f;
+  --ifm-color-primary-lighter: #484554;
+  --ifm-color-primary-lightest: #565365;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+.footer {
+  --ifm-footer-link-color: #c8c7ce;
+  --ifm-footer-link-hover-color: var(--color-teal);
+  --ifm-footer-title-color: #ffffff;
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #40ecf2;
+  --ifm-color-primary-dark: #32eaf1;
+  --ifm-color-primary-darker: #24e9f0;
+  --ifm-color-primary-darkest: #10dee5;
+  --ifm-color-primary-light: #4fedf3;
+  --ifm-color-primary-lighter: #5deff4;
+  --ifm-color-primary-lightest: #79f2f6;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
