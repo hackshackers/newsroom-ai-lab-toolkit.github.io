@@ -104,9 +104,9 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Playbook',
         },
-        {to: '/blog', label: 'Newsroom Blog', position: 'left'},
+        {to: '/blog', label: 'Newsroom Examples', position: 'left'},
       ],
     },
     footer: {
@@ -116,7 +116,7 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Playbook',
               to: '/docs/intro',
             },
           ],

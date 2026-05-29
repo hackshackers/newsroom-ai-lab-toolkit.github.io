@@ -34,18 +34,22 @@ function HomepageIntro() {
     <section className={styles.intro}>
       <div className={clsx('container', styles.introInner)}>
         <p>
-          Exploring how AI could benefit your newsroom, but not sure where to
-          start, or why an idea keeps stalling? This guide shares the process
-          we use with partner newsrooms through Hacks/Hackers' Newsroom AI Lab.
-          It was generated, tested, and iterated through real newsroom
+          This guide is the exact playbook we use to go
+          from "we have an idea" or "we think AI might help somehow"
+          to a clear understanding of what problem is worth solving, what success will look like,
+          and how to build, test, and iterate on a responsible solution
+          that delivers real value to your newsroom and audience.
+        </p>
+        <p>
+          This proces was generated, tested, and iterated through real newsroom
           partnerships, shaped by the challenges, questions, experiments, and
           feedback that came up along the way.
         </p>
         <p>
-          Our goal is to help teams of any size get clearer about the specific
-          challenge or opportunity they want to tackle, who they are trying to
-          help, and what they still need to understand before jumping into tools
-          or solutions.
+          These are the exact steps we follow to help teams of any size get clear
+          about the specific challenge or opportunity they want to tackle,
+          who they are trying to help, and what they still need to understand
+          before jumping to a specific tool or solution.
         </p>
         <p>Inside, you'll find practical exercises and frameworks to help you:</p>
         <ul className={styles.featureList}>
@@ -56,12 +60,6 @@ function HomepageIntro() {
           <li>scope responsible requirements</li>
           <li>prototype, test, learn, and iterate</li>
         </ul>
-        <p>
-          This process has been designed and refined through our experiences
-          helping newsrooms move from "we have an idea" or "we think AI might
-          help somehow" toward a clear understanding of what problem is worth
-          solving, what success should look like, and what to try next.
-        </p>
         <p>Questions, feedback, or ideas for improving this handbook? We'd love to hear from you.</p>
         <p className={styles.authors}>
           Jake Kara &amp; Paige Moody<br />
