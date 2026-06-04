@@ -31,6 +31,33 @@ h1, h2, h3, h4, h5, h6,
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+/* Problem statement highlighting — user/need/goal */
+.highlight-user {
+  background-color: #fce8b2;
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+
+.highlight-need {
+  background-color: #c9daf8;
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+
+.highlight-goal {
+  background-color: #b6d7a8;
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+
+.problem-statement-formula {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: inline-block;
+}
+
 .footer {
   --ifm-footer-link-color: #c8c7ce;
   --ifm-footer-link-hover-color: var(--color-teal);

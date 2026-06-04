@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Newsroom AI Lab Toolkit',
-  tagline: 'A guide for building actually useful stuff',
+  tagline: 'From many observations → one thing worth exploring → many solvable parts',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
