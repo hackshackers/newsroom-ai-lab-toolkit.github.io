@@ -19,15 +19,15 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
-  {
-    title: 'Claude Agent Skills',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        something something
-      </>
-    ),
-  },
+  // {
+  //   title: 'Claude Agent Skills',
+  //   Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+  //   description: (
+  //     <>
+  //       something something
+  //     </>
+  //   ),
+  // },
 ];
 
 function Feature({title, Svg, description}: FeatureItem) {

@@ -1,3 +1,4 @@
+import path from 'path';
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -5,9 +6,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Newsroom AI Lab Toolkit',
+  title: 'Newsroom AI Lab Playbook',
   tagline: 'From many observations → one thing worth exploring → many solvable parts',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/hackshackers_logomark.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -53,6 +54,23 @@ const config: Config = {
     },
   ],
 
+  plugins: [
+    [
+      require.resolve('./plugins/load-markdown-data'),
+      {
+        id: 'problem-statement-examples',
+        dataDir: path.join(__dirname, 'src/data/problem-statement-examples'),
+      },
+    ],
+    [
+      require.resolve('./plugins/load-markdown-data'),
+      {
+        id: 'landing-page',
+        dataDir: path.join(__dirname, 'src/data/landing-page'),
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -93,9 +111,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Newsroom AI Lab Toolkit',
+      title: 'Newsroom AI Lab Playbook',
       logo: {
-        alt: 'Newsroom AI Lab Toolkit Logo',
+        alt: 'Newsroom AI Lab Playbook Logo',
         // src: 'img/logo.svg',
         src: 'img/hackshackers_logomark.png'
       },
@@ -117,7 +135,7 @@ const config: Config = {
           items: [
             {
               label: 'Playbook',
-              to: '/docs/intro',
+              to: '/docs/how-this-works',
             },
           ],
         },
