@@ -21,3 +21,28 @@
   align-items: center;
   justify-content: center;
 }
+
+.intro {
+  padding: 3rem 0 1rem;
+}
+
+.introInner {
+  max-width: 740px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.featureList {
+  margin: 0.5rem 0 1.5rem 1.25rem;
+}
+
+.featureList li {
+  margin-bottom: 0.35rem;
+}
+
+.authors {
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--ifm-color-emphasis-600);
+}

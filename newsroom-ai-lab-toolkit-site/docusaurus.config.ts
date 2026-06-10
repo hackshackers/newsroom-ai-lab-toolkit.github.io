@@ -1,3 +1,4 @@
+import path from 'path';
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -5,9 +6,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Newsroom AI Toolkit',
-  tagline: 'Build actually usefull stuff',
-  favicon: 'img/favicon.ico',
+  title: '[PROTOTYYPE] Newsroom AI Lab Playbook',
+  tagline: 'From many observations → one thing worth exploring → many solvable parts',
+  favicon: 'img/hackshackers_logomark.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -37,6 +38,48 @@ const config: Config = {
     locales: ['en'],
   },
 
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap',
+      },
+    },
+  ],
+
+  plugins: [
+    [
+      require.resolve('./plugins/load-markdown-data'),
+      {
+        id: 'problem-statement-examples',
+        dataDir: path.join(__dirname, 'src/data/problem-statement-examples'),
+      },
+    ],
+    [
+      require.resolve('./plugins/load-markdown-data'),
+      {
+        id: 'landing-page',
+        dataDir: path.join(__dirname, 'src/data/landing-page'),
+      },
+    ],
+    [
+      require.resolve('./plugins/load-markdown-data'),
+      {
+        id: 'problem-statement-benefits',
+        dataDir: path.join(__dirname, 'src/data/problem-statement-benefits'),
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -45,8 +88,8 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -77,24 +120,20 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: '[PROTOTYYPE] Newsroom AI Lab Playbook',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Newsroom AI Lab Playbook Logo',
+        // src: 'img/logo.svg',
+        src: 'img/hackshackers_logomark.png'
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Playbook',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        {to: '/blog', label: 'Newsroom Examples', position: 'left'},
       ],
     },
     footer: {
@@ -104,8 +143,8 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Playbook',
+              to: '/docs/how-this-works',
             },
           ],
         },
@@ -113,16 +152,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Hacks / Hackers',
+              href: 'https://www.hackshackers.com/',
             },
             {
-              label: 'Discord',
+              label: 'COMMUNITY 2',
               href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
             },
           ],
         },
@@ -130,7 +165,7 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
+              label: 'Newsroom Blog',
               to: '/blog',
             },
             {
@@ -140,7 +175,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Hacks/Hackers, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

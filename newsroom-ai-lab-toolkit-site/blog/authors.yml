@@ -1,25 +1,20 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
+paigemoody:
+  name: Paige Moody
+  title: Newsroom AI Lab Co-Founder & Technical Advisor, Developer @ Big Local News
+  url: https://linkedin.com/in/paigemoody
+  image_url: https://github.com/paigemoody.png
   page: true
   socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
+    linkedin: paigemoody
+    github: paigemoody
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+jakekara:
+  name: Jake Kara
+  title: Newsroom AI Lab Co-Founder & Technical Advisor, Developer @ Big Local News
+  url: https://www.linkedin.com/in/jakekara/
+  image_url: https://github.com/jakekara.png
+  page: true
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    linkedin: jakekara
+    github: jakekara
+    blog: https://jakekara.com/

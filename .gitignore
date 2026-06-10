@@ -144,4 +144,5 @@ vite.config.ts.timestamp-*
 
 # Claude Code OAuth credentials backup (Codespaces persistence)
 .claude-credentials/
+.claude/
 .claude/settings.local.json

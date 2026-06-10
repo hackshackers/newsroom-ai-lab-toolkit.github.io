@@ -1,0 +1,42 @@
+.card {
+  border: 2px solid var(--color-light-grey);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  max-width: 560px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.headerText {
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.description {
+  margin-bottom: 1.25rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--color-teal);
+  color: #fff !important;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: opacity 0.15s ease;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
