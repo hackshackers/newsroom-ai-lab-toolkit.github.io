@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import { usePluginData } from '@docusaurus/useGlobalData';
 import { ArrowRight, BookOpen, MessageSquare, Lightbulb, Target, CheckCircle2, Recycle, type LucideIcon } from 'lucide-react';
 
@@ -157,12 +158,12 @@ export default function NewsroomLandingPage() {
                     </div>
                     <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.75rem', fontFamily: 'var(--font-display)' }}>{card.title}</h3>
                     <p style={{ marginBottom: '1.5rem', fontFamily: 'var(--font-editorial)', color: 'color-mix(in oklch, var(--hh-paper) 85%, transparent)' }}><MD>{card.body}</MD></p>
-                    <a href={card.href}
+                    <Link to={card.href}
                       style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontWeight: '500', fontFamily: 'var(--font-ui)', color: 'var(--hh-accent)', textDecoration: 'none', transition: 'color 0.2s' }}
                       onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--hh-paper)'; }}
                       onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--hh-accent)'; }}>
                       {card.cta} <ArrowRight size={20} />
-                    </a>
+                    </Link>
                   </div>
                 );
               })}
