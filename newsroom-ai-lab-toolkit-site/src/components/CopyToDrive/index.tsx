@@ -16,24 +16,8 @@ function DriveIcon() {
   );
 }
 
-export default function CopyToDrive() {
+export default function GDriveIcon() {
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
         <DriveIcon />
-        <span className={styles.headerText}>Template folder</span>
-      </div>
-      <p className={styles.description}>
-        Before you start, create a new folder in your Google Drive to hold all the work for your project. Then open the template folder below and copy any worksheets you need into it as you go.
-      </p>
-      <a
-        className={styles.button}
-        href={FOLDER_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Open template folder in Google Drive →
-      </a>
-    </div>
   );
 }

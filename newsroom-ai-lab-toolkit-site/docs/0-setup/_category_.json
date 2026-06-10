@@ -1,8 +1,8 @@
 {
-  "label": "Setup",
+  "label": "Setup your workspace",
   "position": 1.5,
   "link": {
     "type": "generated-index",
-    "description": "Get set up before you start."
+    "description": "Create a place to hold your work."
   }
 }

@@ -14,7 +14,7 @@ const CSS = `
   }
   .mb-phase-header-main {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -60,7 +60,7 @@ const OBS = {
   ],
   asp: [
     "I want to be able to surface trends across state legislation",
-    "I want to automatically connect bills to historical reporting / stories",
+    "I want to automatically connect House bills to historical reporting / stories",
     "I want to turn podcasts into newsletters/articles",
     "I need an impact-tracking system for fundraising and reporting that helps me tell compelling stories to funders",
   ],
@@ -125,7 +125,7 @@ export default function MethodologyBoard() {
           <div style={{ textAlign:'center', marginBottom:'2rem' }}>
             <div className="mb-phase-header">
               <p className="mb-phase-header-main">Empathize</p>
-              <p className="mb-phase-header-sub">Reporting before you know the story</p>
+              <p className="mb-phase-header-sub">Report before you know the story</p>
             </div>
           </div>
           <Block n="1"
@@ -135,7 +135,7 @@ export default function MethodologyBoard() {
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'0.875rem' }}>
               {[
                 { emoji:'😤', label:'Pain points',               items: OBS.pain  },
-                { emoji:'🐢', label:'Inefficiencies',            items: OBS.ineff },
+                { emoji:'🐢', label:'Inefficiencies & Bottlenecks',            items: OBS.ineff },
                 { emoji:'🧙', label:'Aspirational Capabilities', items: OBS.asp   },
               ].map(({ emoji, label, items }) => (
                 <div key={label}>
@@ -158,7 +158,7 @@ export default function MethodologyBoard() {
           <div style={{ textAlign:'center', marginBottom:'2rem' }}>
             <div className="mb-phase-header">
               <p className="mb-phase-header-main">Define</p>
-              <p className="mb-phase-header-sub">Identifying the story</p>
+              <p className="mb-phase-header-sub">Identify the story</p>
             </div>
           </div>
 
@@ -247,7 +247,7 @@ export default function MethodologyBoard() {
               <div style={{ flex:1, background:c.accentSubtle, border:`2px solid ${c.accent}`, borderRadius:'0.75rem', padding:'1rem' }}>
                 <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:'0.75rem' }}>
                   <p style={{ ...Gs, fontSize:14, fontWeight:600, color:c.ink, margin:0 }}>Brief A</p>
-                  <span style={{ ...Gs, fontSize:12, background:c.accent, color:c.paper, padding:'3px 10px', borderRadius:9999, fontWeight:500 }}>✓ chosen</span>
+                  <span style={{ ...Gs, fontSize:12, background:c.accent, color:c.paper, padding:'3px 10px', borderRadius:9999, fontWeight:500 }}>✓</span>
                 </div>
                 <div style={{ display:'flex', flexDirection:'column', gap:6 }}>
                   {[70,55,65,45,60,40].map((w,j) => <div key={j} style={{ height:7, borderRadius:9999, background:c.border, width:`${w}%` }} />)}
@@ -258,7 +258,6 @@ export default function MethodologyBoard() {
                 <div style={{ display:'flex', flexDirection:'column', gap:6 }}>
                   {[65,50,60,40,55,35].map((w,j) => <div key={j} style={{ height:7, borderRadius:9999, background:c.surface, width:`${w}%` }} />)}
                 </div>
-                <p style={{ ...Fr, fontSize:13, color:c.textSec, fontStyle:'italic', margin:'0.75rem 0 0' }}>next cycle →</p>
               </div>
             </div>
           </Block>
@@ -269,7 +268,7 @@ export default function MethodologyBoard() {
           <div style={{ textAlign:'center', marginBottom:'2rem' }}>
             <div className="mb-phase-header">
               <p className="mb-phase-header-main">Ideate · Prototype · Test</p>
-              <p className="mb-phase-header-sub">Exploring, drafting, and verifying</p>
+              <p className="mb-phase-header-sub">Explore, draft, verify</p>
             </div>
           </div>
 
@@ -327,14 +326,15 @@ export default function MethodologyBoard() {
 
           <Divider label="" />
 
+          
           <Block n="7"
-            title="Draft and verify"
-            note="Answer these questions before building anything. Then draft, verify, test with real people, and iterate until the output meets the standard for this part of the solution."
+            title="Define requirements for this part's solution"
+            note="Before drafting, automating, or prototyping anything, pause to define the work clearly enough that a human can judge whether the result is useful, accurate, and safe to use. This step turns a promising idea into something testable."
           >
             <div style={{ display:'flex', flexDirection:'column', gap:'0.625rem' }}>
               {[
                 { icon:'📥', label:'What inputs does this part need?',       hint:'Name the concrete inputs required — data, sources, context, approvals. Be specific: vague inputs produce vague outputs.' },
-                { icon:'✅', label:'What does good enough output look like?', hint:'Define quality before building. Can a human reliably evaluate the result and catch errors? What does publishable look like for this piece?' },
+                { icon:'✅', label:'What does good enough output look like?', hint:'Define quality before building. Can a human reliably evaluate the result and catch errors? What does "good enough" look like?' },
                 { icon:'⚙️', label:'What kind of solution fits?',             hint:'Could be AI, a rules-based tool, a process change, or keeping it fully human. Start with the problem, not the tool — and identify where humans must stay in the loop.' },
               ].map(({ icon, label, hint }, i, arr) => (
                 <div key={label}>
@@ -352,11 +352,90 @@ export default function MethodologyBoard() {
             </div>
           </Block>
 
-          <Divider label="" />
+          {/* ── 9. EXPERIMENT, BUILD AND VERIFY ── */}
+          <Block n="9"
+            title="Experiment, build and verify this part's solution"
+            note="Explore potential approaches, validate your assumptions and get feedback from users as you go. Iterate until the solution meets the defined parameters for good enough. Don't wait for a perfect solution; aim for progress and learning."
+          >
+            <div style={{ display:'flex', flexDirection:'column', gap:'1.5rem' }}>
 
-          <Block n="8"
-            title="Select next part to report on"
-            note="Once a part is verified and publishable, move to the next. Parts you've solved stay solved — keep going until the brief is done."
+              {/* ── Cycle diagram ── */}
+              <div>
+                <p style={{ ...Gs, fontSize:11, color:c.textSec, textTransform:'uppercase', letterSpacing:'0.08em', fontWeight:600, margin:'0 0 0.75rem' }}>Zoom in: one iteration cycle</p>
+                <div style={{ display:'flex', alignItems:'stretch', gap:0 }}>
+                  {[
+                    { icon:'💡', label:'Hypothesize',       sub:'What approach work for this part?' },
+                    { icon:'🏗️', label:'Build',             sub:'Make something testable' },
+                    { icon:'🗣️', label:'Test & Feedback',   sub:'Try it with real users' },
+                    { icon:'📖', label:'Learn & Adjust',    sub:'What did we discover from trying this?' },
+                  ].map((step, i, arr) => (
+                    <React.Fragment key={step.label}>
+                      <div style={{
+                        flex:1,
+                        background:c.surface,
+                        border:`1.5px solid ${c.border}`,
+                        borderRadius:'0.5rem',
+                        padding:'0.75rem 0.5rem',
+                        textAlign:'center',
+                        display:'flex',
+                        flexDirection:'column',
+                        alignItems:'center',
+                        gap:'0.25rem',
+                      }}>
+                        <span style={{ fontSize:18 }}>{step.icon}</span>
+                        <p style={{ ...Gs, fontSize:12, fontWeight:600, color:c.ink, margin:0, lineHeight:1.3 }}>{step.label}</p>
+                        <p style={{ ...Fr, fontSize:12, color:c.textSec, margin:0, lineHeight:1.4 }}>{step.sub}</p>
+                      </div>
+                      {i < arr.length - 1
+                        ? <div style={{ display:'flex', alignItems:'center', padding:'0 0.25rem', color:c.border, fontSize:16, flexShrink:0 }}>→</div>
+                        : <div style={{ display:'flex', alignItems:'center', padding:'0 0.25rem', color:c.accent, fontSize:14, flexShrink:0, fontWeight:600 }}>↩</div>
+                      }
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+
+              {/* ── Sprint progress ── */}
+              <div>
+                <p style={{ ...Gs, fontSize:11, color:c.textSec, textTransform:'uppercase', letterSpacing:'0.08em', fontWeight:600, margin:'0 0 0.75rem' }}>Zoom out: iteration cycles add up to a solution</p>
+                <div style={{ display:'flex', gap:'0.625rem', alignItems:'flex-end' }}>
+                  {[
+                    { sprint:'Cycle 1', pct:20, label:'rough draft',       status:'done' },
+                    { sprint:'Cycle 2', pct:50, label:'tested + adjusted', status:'done' },
+                    { sprint:'Cycle 3', pct:75, label:'getting closer',    status:'done' },
+                    { sprint:'Cycle 4', pct:98, label:'good enough ✓',   status:'target' },
+                  ].map((s) => (
+                    <div key={s.sprint} style={{ flex:1, display:'flex', flexDirection:'column', gap:'0.375rem' }}>
+                      <div style={{ height:72, background:c.surface, borderRadius:'0.5rem', border:`1.5px solid ${c.border}`, position:'relative', overflow:'hidden' }}>
+                        <div style={{
+                          position:'absolute', bottom:0, left:0, right:0,
+                          height:`${s.pct}%`,
+                          background:c.accent,
+                          opacity: s.status === 'target' ? 0.12 : 0.15,
+                        }} />
+                        {s.status === 'target' && (
+                          <div style={{ position:'absolute', top:'50%', left:0, right:0, transform:'translateY(-50%)', textAlign:'center' }}>
+                            <p style={{ ...Gs, fontSize:11, fontWeight:700, color:c.textSec, margin:0 }}>goal</p>
+                          </div>
+                        )}
+                        <div style={{ position:'absolute', bottom:'0.375rem', left:0, right:0, textAlign:'center' }}>
+                          <span style={{ ...Gs, fontSize:11, fontWeight:600, color:c.textSec }}>{s.pct}%</span>
+                        </div>
+                      </div>
+                      <p style={{ ...Gs, fontSize:11, fontWeight:600, color:c.textSec, margin:0 }}>{s.sprint}</p>
+                      <p style={{ ...Fr, fontSize:11, color:c.textSec, margin:0, fontStyle:'italic', lineHeight:1.3 }}>{s.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+
+            </div>
+          </Block>
+
+          <Block n="10"
+            title="Select next part to tackle and repeat the cycle"
+            note="Once a part of the larger solution is verified to meet user needs move on to tackle the next. Keep going until all parts of the brief are solved."
           >
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'0.625rem' }}>
               {[

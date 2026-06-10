@@ -2,10 +2,17 @@
 sidebar_position: 1
 ---
 
-import CopyToDrive from '@site/src/components/CopyToDrive';
+import GDriveIcon from '@site/src/components/CopyToDrive';
 
-# Get set up
+# Create a project folder
 
-We have created a Google Drive folder containing all the worksheets and exercises you'll need as you work through this guide.
+<h3><GDriveIcon /> All the templates you'll need as you work through this guide are in the form of Google drive files.</h3>
 
-<CopyToDrive />
+<p>
+ To start we recommend creating a new Drive folder wherever makes most sense for your team to hold your work.
+</p>
+<p>
+You will add your work to the folder step by step as you progress through the playbook.
+</p>
+
+

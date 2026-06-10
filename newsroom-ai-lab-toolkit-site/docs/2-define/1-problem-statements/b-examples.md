@@ -7,13 +7,13 @@ import ProblemStatementCarousel from '@site/src/components/ProblemStatementCarou
 
 # Task: Translate observations into Problem Statements
 
-Choose some experiences from your shared folder of observations and frame each as a problem statement using the format:
+Choose some experiences from your shared folder of observations and frame each as a problem statement.
+
 
 <p className="problem-statement-formula">
   <span className="highlight-user">[User]</span> <em>needs</em> <span className="highlight-need">[need]</span> <em>so that</em> <span className="highlight-goal">[goal]</span>.
 </p>
 
-The worksheet will ask for each piece of information separately then automatically combine them into a full phrase.
 
 **Breaking it down:**
 
@@ -30,7 +30,12 @@ The worksheet will ask for each piece of information separately then automatical
 
 <ProblemStatementCarousel />
 
-## Work with the coach
+# Exercise options 
+
+### Use Problem Statement worksheet 
+The worksheet will ask for each piece of information separately then automatically combine them into a full phrase.
+
+### Collaborate with our AI coach
 
 Once you have a rough observation or idea, our Problem Statement Coach can help you workshop it into a clear, structured statement.
 

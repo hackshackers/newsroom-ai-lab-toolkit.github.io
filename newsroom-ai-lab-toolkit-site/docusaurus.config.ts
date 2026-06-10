@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Newsroom AI Lab Playbook',
+  title: '[PROTOTYYPE] Newsroom AI Lab Playbook',
   tagline: 'From many observations → one thing worth exploring → many solvable parts',
   favicon: 'img/hackshackers_logomark.png',
 
@@ -69,6 +69,13 @@ const config: Config = {
         dataDir: path.join(__dirname, 'src/data/landing-page'),
       },
     ],
+    [
+      require.resolve('./plugins/load-markdown-data'),
+      {
+        id: 'problem-statement-benefits',
+        dataDir: path.join(__dirname, 'src/data/problem-statement-benefits'),
+      },
+    ],
   ],
 
   presets: [
@@ -111,7 +118,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Newsroom AI Lab Playbook',
+      title: '[PROTOTYYPE] Newsroom AI Lab Playbook',
       logo: {
         alt: 'Newsroom AI Lab Playbook Logo',
         // src: 'img/logo.svg',
