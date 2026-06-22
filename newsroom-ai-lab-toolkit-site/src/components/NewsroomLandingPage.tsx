@@ -1,9 +1,8 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { usePluginData } from '@docusaurus/useGlobalData';
-import { ArrowRight, BookOpen, MessageSquare, Lightbulb, Target, CheckCircle2, Recycle, type LucideIcon } from 'lucide-react';
-
-const ICONS: Record<string, LucideIcon> = { BookOpen, MessageSquare, Lightbulb, Target, Recycle };
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 function md(text: string): string {
   return text
@@ -13,6 +12,20 @@ function md(text: string): string {
 
 function MD({ children, style }: { children: string; style?: React.CSSProperties }) {
   return <span dangerouslySetInnerHTML={{ __html: md(children) }} style={style} />;
+}
+
+function PartnerLogo({ partner }: { partner: { name: string; logo: string; href?: string; invert?: boolean; containerWidth?: number; maxHeight?: string } }) {
+  const src = useBaseUrl(partner.logo);
+  const width = partner.containerWidth ?? 140;
+  const maxHeight = partner.maxHeight ?? '2.25rem';
+  const img = <img src={src} alt={partner.name} style={{ maxWidth: '100%', maxHeight, width: 'auto', height: 'auto', objectFit: 'contain', opacity: 0.9, filter: partner.invert ? 'brightness(0) invert(1)' : undefined }} />;
+  return (
+    <div style={{ width: `${width}px`, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 2rem' }}>
+      {partner.href
+        ? <a href={partner.href} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', opacity: 1, transition: 'opacity 0.2s' }} onMouseEnter={e => e.currentTarget.style.opacity = '0.7'} onMouseLeave={e => e.currentTarget.style.opacity = '1'}>{img}</a>
+        : img}
+    </div>
+  );
 }
 
 export default function NewsroomLandingPage() {
@@ -25,9 +38,7 @@ export default function NewsroomLandingPage() {
   const hero = s('hero');
   const credibility = s('credibility');
   const approach = s('approach');
-  const framework = s('framework');
   const why = s('whyItWorks');
-  const cta = s('cta');
 
   return (
     <>
@@ -54,8 +65,25 @@ export default function NewsroomLandingPage() {
           51%, 100% { opacity: 0; }
         }
 
+        @keyframes marquee {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+
+        .partner-marquee {
+          display: flex;
+          width: max-content;
+          animation: marquee 28s linear infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .partner-marquee { animation: none; }
+        }
+
         .landing-container { font-family: var(--font-ui); }
         .landing-container * { box-sizing: border-box; }
+        .section-dark a { color: color-mix(in oklch, var(--hh-accent) 80%, var(--hh-paper)); }
+        .section-dark a:hover { color: var(--hh-paper); }
       `}</style>
 
       <div className="landing-container" style={{ minHeight: '100vh', backgroundColor: 'var(--hh-paper)' }}>
@@ -72,45 +100,60 @@ export default function NewsroomLandingPage() {
           </div>
         </section>
 
-        {/* Credibility Anchor */}
-        <section style={{ padding: '3.5rem 1.5rem', backgroundColor: 'var(--hh-paper)', color: 'var(--hh-ink)' }}>
-          <div style={{ maxWidth: '64rem', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '2rem', fontFamily: 'var(--font-display)', color: 'var(--hh-ink)' }}>
-              <span style={{ color: 'var(--hh-accent)', fontWeight: '500' }}>/ </span>{credibility.heading}
-            </h2>
-            <p style={{ fontFamily: 'var(--font-editorial)', fontSize: '1.125rem', lineHeight: '1.75', color: 'var(--hh-primary-text)', margin: 0 }}>
-              <strong style={{ fontFamily: 'var(--font-display)', color: 'var(--hh-ink)', display: 'block', fontSize: '1.125rem', marginBottom: '0.75rem' }}><MD>{credibility.bold}</MD></strong>
-              <MD>{credibility.body}</MD>
-            </p>
-          </div>
-        </section>
-
         {/* Our Approach */}
         <section style={{ padding: '4rem 1.5rem', backgroundColor: 'var(--hh-surface-subtle)' }}>
           <div style={{ maxWidth: '64rem', margin: '0 auto' }}>
             <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '2rem', fontFamily: 'var(--font-display)', color: 'var(--hh-ink)' }}>
               <span style={{ color: 'var(--hh-accent)', fontWeight: '500' }}>/ </span>{approach.heading}
             </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem', fontFamily: 'var(--font-editorial)', fontSize: '1.125rem', lineHeight: '1.75', color: 'var(--hh-primary-text)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.25rem', fontFamily: 'var(--font-editorial)', fontSize: '1.125rem', lineHeight: '1.75', color: 'var(--hh-primary-text)' }}>
               {approach.paragraphs?.map((p: string, i: number) => (
                 <p key={i}><MD>{p}</MD></p>
               ))}
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
-              {approach.cards?.map((card: any) => {
-                const Icon = ICONS[card.icon];
-                return (
-                  <div key={card.title} style={{ padding: '1.5rem', borderRadius: '0.5rem', backgroundColor: 'var(--hh-paper)', border: '1px solid var(--hh-border)' }}>
-                    <div style={{ width: '3rem', height: '3rem', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', backgroundColor: 'color-mix(in oklch, var(--hh-accent) 15%, var(--hh-paper))' }}>
-                      {Icon && <Icon size={24} style={{ color: 'var(--hh-accent)' }} />}
-                    </div>
-                    <h3 style={{ fontWeight: '600', fontSize: '1.125rem', marginBottom: '0.5rem', fontFamily: 'var(--font-display)', color: 'var(--hh-ink)' }}>{card.title}</h3>
-                    <p style={{ fontFamily: 'var(--font-editorial)', color: 'var(--hh-secondary-text)' }}><MD>{card.body}</MD></p>
-                  </div>
-                );
-              })}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '3rem', paddingTop: '1.5rem' }}>
+              {approach.cards?.map((card: any, i: number) => (
+                <div key={card.title}>
+                  <p style={{ fontFamily: 'var(--font-display)', fontSize: '3.5rem', fontWeight: '300', lineHeight: 1, marginBottom: '1.25rem', color: 'var(--hh-ink)' }}>
+                    {i + 1}<span style={{ color: 'var(--hh-accent)' }}>/</span>
+                  </p>
+                  <h3 style={{ fontWeight: '700', fontSize: '1.125rem', marginBottom: '0.75rem', fontFamily: 'var(--font-display)', color: 'var(--hh-ink)' }}>{card.title}</h3>
+                  <p style={{ fontFamily: 'var(--font-editorial)', fontSize: '1rem', lineHeight: '1.7', color: 'var(--hh-secondary-text)', margin: 0 }}><MD>{card.body}</MD></p>
+                </div>
+              ))}
             </div>
           </div>
+        </section>
+
+        {/* Credibility + Partners */}
+        <section style={{ backgroundColor: 'var(--hh-paper)', color: 'var(--hh-ink)' }}>
+          <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '3.5rem 1.5rem 1rem' }}>
+            <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '2rem', fontFamily: 'var(--font-display)', color: 'var(--hh-ink)' }}>
+              <span style={{ color: 'var(--hh-accent)', fontWeight: '500' }}>/ </span>{credibility.heading}
+            </h2>
+            <strong style={{ fontFamily: 'var(--font-display)', color: 'var(--hh-ink)', display: 'block', fontSize: '1.125rem', marginBottom: '0.75rem' }}><MD>{credibility.bold}</MD></strong>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontFamily: 'var(--font-editorial)', fontSize: '1.125rem', lineHeight: '1.75', color: 'var(--hh-primary-text)' }}>
+              {credibility.paragraphs?.map((p: string, i: number) => (
+                <p key={i} style={{ margin: 0 }}><MD>{p}</MD></p>
+              ))}
+            </div>
+          </div>
+          {credibility.partners?.length > 0 && (
+            <div style={{ backgroundColor: 'var(--hh-ink)', paddingTop: '1.25rem' }}>
+              <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
+                <p style={{ fontFamily: 'var(--font-display)', fontSize: '0.75rem', fontWeight: '600', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'color-mix(in oklch, var(--hh-paper) 75%, transparent)', margin: 0 }}>
+                  Partner newsrooms
+                </p>
+              </div>
+              <div style={{ padding: '0.5rem 0 1rem', overflow: 'hidden', WebkitMaskImage: 'linear-gradient(to right, transparent 1.5rem, black 3.5rem, black calc(100% - 3.5rem), transparent calc(100% - 1.5rem))', maskImage: 'linear-gradient(to right, transparent 1.5rem, black 3.5rem, black calc(100% - 3.5rem), transparent calc(100% - 1.5rem))' }}>
+                <div className="partner-marquee">
+                  {[...credibility.partners, ...credibility.partners].map((partner: any, i: number) => (
+                    <PartnerLogo key={i} partner={partner} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Why It Works */}
@@ -136,37 +179,15 @@ export default function NewsroomLandingPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section id="get-started" style={{ padding: '5rem 1.5rem', backgroundColor: 'var(--hh-ink)', color: 'var(--hh-paper)' }}>
-          <div style={{ maxWidth: '64rem', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{ fontSize: '2.25rem', fontWeight: 'bold', marginBottom: '1.5rem', fontFamily: 'var(--font-display)' }}>
-              <span style={{ color: 'var(--hh-accent)', fontWeight: '500' }}>/ </span>{cta.heading}
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', maxWidth: '48rem', margin: '0 auto' }}>
-              {cta.cards?.map((card: any) => {
-                const Icon = ICONS[card.icon];
-                return (
-                  <div key={card.title}
-                    style={{ padding: '2rem', borderRadius: '0.5rem', textAlign: 'left', backgroundColor: 'color-mix(in oklch, var(--hh-paper) 10%, transparent)', border: '1px solid color-mix(in oklch, var(--hh-paper) 20%, transparent)', transition: 'border-color 0.2s' }}
-                    onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--hh-accent)'; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'color-mix(in oklch, var(--hh-paper) 20%, transparent)'; }}>
-                    <div style={{ width: '4rem', height: '4rem', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', backgroundColor: 'var(--hh-accent)' }}>
-                      {Icon && <Icon size={32} style={{ color: 'var(--hh-paper)' }} />}
-                    </div>
-                    <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.75rem', fontFamily: 'var(--font-display)' }}>{card.title}</h3>
-                    <p style={{ marginBottom: '1.5rem', fontFamily: 'var(--font-editorial)', color: 'color-mix(in oklch, var(--hh-paper) 85%, transparent)' }}><MD>{card.body}</MD></p>
-                    <Link to={card.href}
-                      style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontWeight: '500', fontFamily: 'var(--font-ui)', color: 'var(--hh-accent)', textDecoration: 'none', transition: 'color 0.2s' }}
-                      onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--hh-paper)'; }}
-                      onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--hh-accent)'; }}>
-                      {card.cta} <ArrowRight size={20} />
-                    </Link>
-                  </div>
-                );
-              })}
+            <div style={{ marginTop: '3rem' }}>
+              <Link
+                to="/docs/how-this-works"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.625rem', backgroundColor: 'var(--hh-accent)', color: 'var(--hh-paper)', fontFamily: 'var(--font-display)', fontWeight: '600', fontSize: '1.25rem', padding: '1rem 2.25rem', borderRadius: '0.375rem', textDecoration: 'none' }}
+                onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.85'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+              >
+                / Get Started <ArrowRight size={20} />
+              </Link>
             </div>
           </div>
         </section>

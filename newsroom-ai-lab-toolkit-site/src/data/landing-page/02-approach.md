@@ -1,17 +1,18 @@
 ---
 section: approach
-heading: "The Playbook: Design Thinking for Newsrooms"
+heading: "The Playbook: The Problem Comes Before the Tool"
 paragraphs:
-  - "Starting a new reporting project doesn't mean you already know the headline—or even the angle. You gather observations, facts, and perspectives **before** determining what the story really is."
-  - "This is the core of our translation of Design Thinking for Newsrooms - start with what people are experiencing, challenge your assumptions, and let the right solutions emerge."
+  - "Starting a new reporting project doesn't mean you already know the headline—or even the angle. You gather observations, facts, and perspectives **before** determining what the story really is. We use the same instinct for building newsroom technology."
+  - "Most newsroom AI projects stall not because the technology failed, but because a solution was chosen before the problem was understood. This playbook helps you get clear on the problem you are trying to solve, then guides you in discovering the right solution."
+  - "Every project we run follows the same three principles:"
 cards:
   - icon: Lightbulb
-    title: Understand People
-    body: "Get to the root of what people are actually experiencing—colleagues, community members, yourself."
+    title: Talk to the people doing the work
+    body: "Find out what reporters, edtiors, community members, and partners are actually experiencing — before forming any opinions about what to build."
   - icon: Target
-    title: Challenge Assumptions
-    body: "Don't jump to solutions. Redefine problems as new information emerges."
+    title: Don't be a hammer looking for a nail
+    body: "Resist the pull toward a specific solution. Define the problem clearly first — the right tool becomes obvious once you know what you're actually solving."
   - icon: Recycle
-    title: Prototype & Test
-    body: "Build quickly, test with real users, iterate. The best solutions emerge from rapid cycles and continuous user input."
+    title: Test it before you scale it
+    body: "Build quickly - get a functional prototype in front of real users as soon as possible, then let what you learn shape what you scale. We aim to discover what works (and what doesn't!) before we bet big on any particular solution."
 ---
