@@ -33,7 +33,7 @@ Choose some experiences from your shared folder of observations and frame each a
 # Exercise options 
 
 ### Use Problem Statement worksheet 
-The worksheet will ask for each piece of information separately then automatically combine them into a full phrase.
+The worksheet will ask for each piece of information separately, then automatically combine them into a full phrase.
 
 ### Collaborate with our AI coach
 

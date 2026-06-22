@@ -11,7 +11,7 @@ items:
   - title: No technical background required.
     description: "Anyone  using this playbook—it's about thinking through the problem, not coding it. The clearer you can describe the problem, needs and constraints, the better AI tools (ChatGPT, Claude ) can help you build the actual solution."
   - title: AI-friendly by design.
-    description: "We've created specialized ChatGPT AI assistants and Claude Agent Skills for each part of the playbook to help you get specialized feedback and incorporate playbook strategies in your daily work."
+    description: "We've created specialized ChatGPT AI assistants and Claude Agent Skills for each part of the playbook to help you get tailored feedback and incorporate playbook strategies in your daily work."
   - title: Solutions that stick.
     description: "By staying curious and iterative—gathering leads before writing the lede—you build tools that get used every day because they solve real problems."
 ---
