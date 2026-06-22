@@ -23,6 +23,10 @@ module.exports = function loadMarkdownDataPlugin(_context, options) {
   return {
     name: 'load-markdown-data',
 
+    getPathsToWatch() {
+      return [dataDir];
+    },
+
     async loadContent() {
       const files = fs
         .readdirSync(dataDir)
