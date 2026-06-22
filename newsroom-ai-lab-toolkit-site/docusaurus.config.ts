@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: '[PROTOTYYPE] Newsroom AI Lab Playbook',
+  title: '[PROTOTYPE] Newsroom AI Lab Playbook',
   tagline: 'From many observations → one thing worth exploring → many solvable parts',
   favicon: 'img/hackshackers_logomark.png',
 
@@ -91,21 +91,7 @@ const config: Config = {
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -120,7 +106,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: '[PROTOTYYPE] Newsroom AI Lab Playbook',
+      title: '[PROTOTYPE] Newsroom AI Lab Playbook',
       logo: {
         alt: 'Newsroom AI Lab Playbook Logo',
         // src: 'img/logo.svg',
@@ -133,7 +119,6 @@ const config: Config = {
           position: 'left',
           label: 'Playbook',
         },
-        {to: '/blog', label: 'Newsroom Examples', position: 'left'},
       ],
     },
     footer: {
@@ -164,10 +149,6 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Newsroom Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/facebook/docusaurus',
