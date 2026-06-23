@@ -28,33 +28,6 @@ const c = {
   accentSubtle: 'color-mix(in oklch, oklch(0.50 0.24 158) 10%, oklch(0.99 0.005 90))',
 };
 
-const OBS = {
-  pain: [
-    "Not everyone knows where Instagram documentation/logins live",
-    "Old captions get recycled in WordPress photos",
-    "Can't search many municipal agendas/minutes because software is terrible",
-    "Work that takes months disappears from organizational awareness",
-  ],
-  ineff: [
-    "So hard to create timelines from FOIA dumps of thousands of emails",
-    "I have to manually convert municipal data from PDFs/websites into spreadsheets",
-    "It's total chaos when coordinating long-form stories",
-  ],
-  asp: [
-    "I want to be able to surface trends across state legislation",
-    "I want to automatically connect House bills to historical reporting / stories",
-    "I want to turn podcasts into newsletters/articles",
-    "I need an impact-tracking system for fundraising and reporting that helps me tell compelling stories to funders",
-  ],
-};
-
-function StickyNote({ text }: { text: string }) {
-  return (
-    <div style={{ background:c.paper, border:`1px solid ${c.border}`, borderRadius:'0.5rem', padding:'0.625rem 0.75rem', boxShadow:'0 1px 2px rgba(0,0,0,0.03)' }}>
-      <p style={{ ...Fr, fontSize:15, color:c.text, lineHeight:1.5, margin:0 }}>{text}</p>
-    </div>
-  );
-}
 
 function Block({ n, total, title, note, children, footer }: { n: string; total?: number; title: string; note?: string; children: React.ReactNode; footer?: React.ReactNode }) {
   return (
@@ -85,7 +58,7 @@ function StepStructuredContent({ idx }: { idx: number }) {
     { label: 'Why it matters', text: detail.whyItMatters },
   ];
   return (
-    <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1.25rem' }}>
+    <div style={{ display:'flex', flexDirection:'column', gap:'1.25rem' }}>
       {sections.map(({ label, text }) => (
         <div key={label}>
           <p style={{ ...Cp, fontSize:11, fontWeight:600, color:c.textSec, textTransform:'uppercase', letterSpacing:'0.1em', margin:'0 0 0.5rem' }}>{label}</p>
@@ -210,26 +183,7 @@ function CombinedProgress({ steps, currentIdx, onStep, isLooping, triggerLoop }:
 
 const STEP_CONTENTS: Array<() => React.ReactNode> = [
   // 1 — Talk to people
-  () => (
-    <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'0.875rem' }}>
-      {[
-        { emoji:'😤', label:'Pain points',                 items: OBS.pain  },
-        { emoji:'🐢', label:'Inefficiencies & Bottlenecks', items: OBS.ineff },
-        { emoji:'🧙', label:'Aspirational Capabilities',   items: OBS.asp   },
-      ].map(({ emoji, label, items }) => (
-        <div key={label}>
-          <div style={{ display:'flex', alignItems:'center', gap:'0.375rem', marginBottom:'0.625rem' }}>
-            <span style={{ fontSize:16 }}>{emoji}</span>
-            <span style={{ ...Gs, fontSize:12, fontWeight:600, color:c.textSec, textTransform:'uppercase', letterSpacing:'0.06em' }}>{label}</span>
-          </div>
-          <div style={{ display:'flex', flexDirection:'column', gap:'0.5rem' }}>
-            {items.map(t => <StickyNote key={t} text={t} />)}
-            <p style={{ ...Gs, fontSize:16, color:c.border, textAlign:'center', letterSpacing:'0.3em', userSelect:'none', margin:0 }}>· · ·</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  ),
+  () => null,
 
   // 2 — Refine your understanding
   () => (

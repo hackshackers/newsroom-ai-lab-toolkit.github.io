@@ -52,7 +52,7 @@ export default function SiteFooter() {
               Supported by
             </span>
             <a href="https://www.mcgovern.org" target="_blank" rel="noopener noreferrer">
-              <img src={sponsorLogo} alt="McGovern Foundation" style={{ height: '8rem', width: 'auto', objectFit: 'contain', opacity: 0.9, filter: 'brightness(0) invert(1)' }} />
+              <img src={sponsorLogo} alt="McGovern Foundation" style={{ height: '4rem', width: 'auto', objectFit: 'contain', opacity: 0.9, filter: 'brightness(0) invert(1)' }} />
             </a>
           </div>
           <p style={{ marginTop: '1.5rem', fontSize: '0.875rem' }}>

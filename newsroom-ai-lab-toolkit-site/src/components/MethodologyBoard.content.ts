@@ -24,11 +24,11 @@ export const STEP_DETAILS: StepDetail[] = [
   {
     title: 'Problem Statements: Clearly define the problem',
     summary:
-      "Like finding your nut graf: who is affected, what's at stake, why it matters. Review your notes and observations and frame each as a focused statement that captures the essence of the experience.",
+      "Like finding your nut graf: who is affected, what's at stake, why it matters.",
     outcome:
       'A small set of clear problem statements, each naming who is affected, what they can\'t do, and why it matters.',
     whatYoullDo:
-      'Group your observations by theme. Write each cluster as a single sentence: "Journalists at X struggle to do Y because Z." Test each statement by asking: could you pitch this in a meeting?',
+      'Review your notes and observations and frame each as a structured statement that captures the essence of the experience.',
     whyItMatters:
       'Fuzzy problems produce bad solutions. A sharp problem statement keeps the work scoped and gives you something to test your solution against later.',
   },
@@ -37,7 +37,7 @@ export const STEP_DETAILS: StepDetail[] = [
   {
     title: 'Problem Briefs: Expand your understanding and define scope',
     summary:
-      "Like writing a story pitch or memo: add context, who's affected, what success looks like, what still needs reporting. Writing it out tests whether the problem is real and the scope is clear.",
+      "Like writing a story pitch or memo: add context, who's affected, what success looks like, what still needs reporting. Writing it out tests whether you have enough information to confirm the problem is clear and worth solving.",
     outcome:
       'A brief per problem that includes context, who\'s affected, what success looks like, and what\'s still unknown.',
     whatYoullDo:

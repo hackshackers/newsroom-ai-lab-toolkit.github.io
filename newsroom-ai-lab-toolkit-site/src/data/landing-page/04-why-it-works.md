@@ -7,7 +7,7 @@ items:
   - title: No technical background required.
     description: "You don't need to know how to code to use this Playbook. It's about thinking through each problem clearly—and the clearer you can describe the problem, the better AI tools can help you build the solution."
   - title: AI coaches built for every stage.
-    description: "We've built specialized AI assistants and Claude Agent Skills for each stage of the Playbook—so you get tailored feedback and guidance at every step, not just a framework and a good-luck wave."
+    description: "We've built specialized AI assistants and Agent Skills for each stage of the Playbook to offer a thinking partner at every step."
   - title: Solutions that actually get used.
     description: "Teams that follow this process build tools that get adopted—because they solved a problem people actually had, not one that seemed likely from the outside."
 ---
