@@ -1,8 +1,8 @@
 {
-  "label": "3. Ideate",
+  "label": "3. Iterate",
   "position": 3,
   "link": {
-    "type": "generated-index",
-    "description": "TKTK"
+    "type": "doc",
+    "id": "ideate/a-overview"
   }
 }

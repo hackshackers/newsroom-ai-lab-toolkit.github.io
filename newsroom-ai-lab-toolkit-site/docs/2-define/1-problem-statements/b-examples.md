@@ -1,9 +1,12 @@
 ---
 sidebar_position: 2
 hide_table_of_contents: true
+coach_url: "https://chatgpt.com/g/g-69b17114f7308191acdba3b787051a06-beta-hacks-hackers-problem-statement-assistant"
+skill_url: "https://raw.githubusercontent.com/jakekara/newsroom-ai-lab-skills/main/problem-statement-coach/SKILL.md"
 ---
 
 import ProblemStatementCarousel from '@site/src/components/ProblemStatementCarousel';
+import TaskResources from '@site/src/components/TaskResources';
 
 # Task: Translate observations into Problem Statements
 
@@ -49,12 +52,4 @@ The coach will ask you questions about who is affected, what they actually need,
 
 **What to expect:** The coach won't write your problem statement for you — it will help you think through each part of the format so the final statement reflects your actual understanding of the problem. If something feels vague, it will surface that rather than paper over it.
 
-<a
-  className="button button--primary button--lg"
-  href="https://chatgpt.com/g/g-69b17114f7308191acdba3b787051a06-beta-hacks-hackers-problem-statement-assistant"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{marginTop:'1rem', display:'inline-block'}}
->
-  Open the Problem Statement Coach →
-</a>
+<TaskResources />
