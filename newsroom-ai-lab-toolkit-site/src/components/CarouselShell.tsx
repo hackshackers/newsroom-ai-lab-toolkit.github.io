@@ -12,8 +12,12 @@ export default function CarouselShell<T>({ items, renderCard }: CarouselShellPro
 
   return (
     <div style={{ border: '2px solid #e5e4e9', borderRadius: '0.75rem', overflow: 'hidden', margin: '1.5rem 0' }}>
-      <div style={{ padding: '1.5rem' }}>
-        {renderCard(items[idx], idx)}
+      <div style={{ padding: '1.5rem', display: 'grid' }}>
+        {items.map((item, i) => (
+          <div key={i} style={{ gridColumn: 1, gridRow: 1, visibility: i !== idx ? 'hidden' : undefined, pointerEvents: i === idx ? 'auto' : 'none' }}>
+            {renderCard(item, i)}
+          </div>
+        ))}
       </div>
       <div style={{ borderTop: '2px solid #e5e4e9', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: '#f9fafb' }}>
         <button

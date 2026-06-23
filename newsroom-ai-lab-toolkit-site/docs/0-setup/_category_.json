@@ -1,8 +1,8 @@
 {
-  "label": "Setup your workspace",
+  "label": "Create a project folder",
   "position": 1.5,
   "link": {
-    "type": "generated-index",
-    "description": "Create a place to hold your work."
+    "type": "doc",
+    "id": "setup/a-setup"
   }
 }

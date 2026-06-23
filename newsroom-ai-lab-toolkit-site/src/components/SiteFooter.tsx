@@ -26,7 +26,7 @@ export default function SiteFooter() {
           paddingTop: '2rem',
         }}>
           <p style={{ marginBottom: '1rem' }}>
-            Questions, feedback, or ideas for improving this playbook? We'd love to hear from you.
+            Questions, feedback, or ideas for improving the Playbook? We'd love to hear from you.
           </p>
           <p>
             <a href="mailto:jakek@hackshackers.com" style={accentLinkStyle}
