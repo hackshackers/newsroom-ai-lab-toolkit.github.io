@@ -7,22 +7,14 @@ skill_url: "https://raw.githubusercontent.com/jakekara/newsroom-ai-lab-skills/ma
 
 import ProblemStatementCarousel from '@site/src/components/ProblemStatementCarousel';
 import TaskResources from '@site/src/components/TaskResources';
+import ProblemStatementFormula from '@site/src/components/ProblemStatementFormula';
 
 # Task: Translate observations into Problem Statements
 
 Choose some experiences from your shared folder of observations and frame each as a problem statement.
 
 
-<p className="problem-statement-formula">
-  <span className="highlight-user">[User]</span> <em>needs</em> <span className="highlight-need">[need]</span> <em>so that</em> <span className="highlight-goal">[goal]</span>.
-</p>
-
-
-**Breaking it down:**
-
-- **<span className="highlight-user">User</span>**: *Who* is affected? (Reporter, editor, another specific role, a specific desk or team?)
-- **<span className="highlight-need">Need</span>**: *What* do they need to accomplish, avoid, or understand?
-- **<span className="highlight-goal">Goal</span>**: *Why* does it matter in practice? What concrete outcome improves?
+<ProblemStatementFormula />
 
 **Tips:**
 
