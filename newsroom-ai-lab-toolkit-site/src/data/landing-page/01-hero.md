@@ -1,7 +1,7 @@
 ---
 section: hero
 headline: "[PROTOTYPE] Build Solutions Like You Report Stories"
-subheading: The Newsroom AI Lab Playbook helps you use same instincts you bring to reporting—listening, observing, questioning assumptions—to move from fuzzy challenges to solutions that actually work.
+subheading: The Newsroom AI Lab Playbook helps you use same instincts you bring to reporting—listening, observing, questioning assumptions—to move from fuzzy challenges to technical solutions that are actually useful to your work.
 primaryButton:
   label: Start the Guided Tutorial
   href: "#get-started"

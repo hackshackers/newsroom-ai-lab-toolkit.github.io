@@ -2,7 +2,7 @@
 section: approach
 heading: "The Newsroom AI Lab Playbook"
 paragraphs:
-  - "Starting a new reporting project doesn't mean you already know the headline—or even the angle. You gather observations, facts, and perspectives **before** determining what the story really is. We use the same instinct for building technical solutions."
+  - "Starting a new reporting project doesn't mean you already know the headline—or even the angle. You gather observations, facts, and perspectives **before** determining what the story really is. Our approach uses the same instinct for building technical solutions."
   - "Most newsroom AI projects stall not because the technology failed, but because a solution was chosen before the problem was understood. This Playbook helps you get clear on the problem you are trying to solve, then guides you in discovering the right solution."
   - "Every project we run follows the same three principles:"
 cards:
