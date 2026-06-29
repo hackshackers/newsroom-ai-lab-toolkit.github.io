@@ -44,7 +44,7 @@ export default function ObservationExamples() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             {items.map(text => (
               <div key={text} style={{ background: 'var(--ifm-background-color)', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '0.5rem', padding: '0.625rem 0.75rem', boxShadow: '0 1px 2px rgba(0,0,0,0.03)' }}>
-                <p style={{ fontFamily: "'Fraunces', serif", fontSize: 14, lineHeight: 1.5, margin: 0 }}>{text}</p>
+                <p style={{ fontFamily: "'Fraunces', serif", fontSize: 16, lineHeight: 1.5, margin: 0 }}>{text}</p>
               </div>
             ))}
             <p style={{ fontFamily: "'Geist', sans-serif", fontSize: 16, color: 'var(--ifm-color-emphasis-200)', textAlign: 'center', letterSpacing: '0.3em', userSelect: 'none', margin: 0 }}>· · ·</p>

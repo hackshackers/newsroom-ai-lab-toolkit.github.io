@@ -4,7 +4,7 @@ sidebar_position: 1
 
 import GDriveIcon from '@site/src/components/CopyToDrive';
 
-# Create a project folder
+# Setup
 
 <h3><GDriveIcon /> All the templates you'll need as you work through the Playbook are in the form of Google drive files.</h3>
 

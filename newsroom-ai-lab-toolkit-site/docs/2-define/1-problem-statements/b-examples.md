@@ -8,17 +8,18 @@ skill_url: "https://raw.githubusercontent.com/jakekara/newsroom-ai-lab-skills/ma
 import ProblemStatementCarousel from '@site/src/components/ProblemStatementCarousel';
 import TaskResources from '@site/src/components/TaskResources';
 import ProblemStatementFormula from '@site/src/components/ProblemStatementFormula';
+import GDriveIcon from '@site/src/components/CopyToDrive';
 
 # Task: Translate observations into Problem Statements
 
-Choose some experiences from your shared folder of observations and frame each as a problem statement.
+Choose 3-5 experiences from your shared collection of observations and frame each as a problem statement. 
 
 
 <ProblemStatementFormula />
 
 **Tips:**
 
-- As you go through the process you will find places where you need more information — that's good! It highlights where more user research is needed. Go back to the person who shared the original observation to get more clarity.
+- As you go through the process you will find places where you need more information - that's good! It highlights where more user research is needed. Go back to the person who shared the original observation to get more clarity.
 - Sometimes the user will be one person. Other times it will be a group. When it is a group, try to make it a specific one.
 
 ## Examples
@@ -30,11 +31,21 @@ Choose some experiences from your shared folder of observations and frame each a
 ### Use Problem Statement worksheet 
 The worksheet will ask for each piece of information separately, then automatically combine them into a full phrase.
 
-### Collaborate with our AI coach
+<style>{`.template-btn { display:inline-flex; align-items:center; gap:0.625rem; padding:1rem; border-radius:var(--ifm-global-radius); border:1px solid var(--ifm-color-emphasis-300); background:var(--ifm-background-color); color:var(--ifm-font-color-base); font-weight:500; font-size:var(--ifm-font-size-base); text-decoration:none; margin-top:0.5rem; margin-bottom:0.5rem; transition:border-color 0.2s ease; } .template-btn:hover { border-color:var(--ifm-color-primary); text-decoration:none; color:var(--ifm-font-color-base); }`}</style>
+
+<a
+  href="https://docs.google.com/spreadsheets/d/1o04mD_wDQwg97yEIPEEVNFANJ4rNeioevMmYl_DDv_A/template/preview"
+  target="_blank"
+  className="template-btn"
+>
+  <GDriveIcon /> Problem Statement Worksheet Template
+</a>
+
+### Collaborate with our AI Problem Statement coach
 
 Once you have a rough observation or idea, our Problem Statement Coach can help you workshop it into a clear, structured statement.
 
-The coach will ask you questions about who is affected, what they actually need, and why it matters — and push back when something is too vague or bundling too many things together.
+The coach will ask you questions about who is affected, what they actually need, and why it matters - and push back when something is too vague or bundling too many things together.
 
 **What to bring:**
 
@@ -42,6 +53,6 @@ The coach will ask you questions about who is affected, what they actually need,
 - Any context you have about who experiences it and why it matters
 - Openness to being asked "what do you mean by that?" more than once
 
-**What to expect:** The coach won't write your problem statement for you — it will help you think through each part of the format so the final statement reflects your actual understanding of the problem. If something feels vague, it will surface that rather than paper over it.
+**What to expect:** The coach won't write your problem statement for you - it will help you think through each part of the format so the final statement reflects your actual understanding of the problem. If something feels vague, it will surface that rather than paper over it.
 
 <TaskResources />

@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6,
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* Problem statement highlighting — user/need/goal */
+/* Problem statement highlighting - user/need/goal */
 .highlight-user {
   background-color: #fce8b2;
   padding: 1px 3px;
