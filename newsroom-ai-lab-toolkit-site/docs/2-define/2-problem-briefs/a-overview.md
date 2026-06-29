@@ -2,9 +2,11 @@
 sidebar_position: 1
 ---
 
+import GDriveIcon from '@site/src/components/CopyToDrive';
+
 # Problem Briefs
 
-In this step you're going to expand a problem statement from the previous exercise into a **problem brief** — a document that gives you the details you need to start solving the problem.
+In this step you're going to expand a problem statement from the previous exercise into a **problem brief** - a document that gives you the details you need to start solving the problem.
 
 A problem brief expands on a **problem statement** by adding:
 
@@ -26,3 +28,13 @@ Making assumptions here on the user's behalf is a common pitfall that leads to s
 :::tip[State the obvious]
 It's hard to identify when you're making subtle assumptions. A good reporter trick to avoid that is to **repeat back your understanding** for confirmation, even if it seems obvious, and write it down.
 :::
+
+<style>{`.template-btn { display:inline-flex; align-items:center; gap:0.625rem; padding:1rem; border-radius:var(--ifm-global-radius); border:1px solid var(--ifm-color-emphasis-300); background:var(--ifm-background-color); color:var(--ifm-font-color-base); font-weight:500; font-size:var(--ifm-font-size-base); text-decoration:none; margin-top:0.5rem; margin-bottom:0.5rem; transition:border-color 0.2s ease; } .template-btn:hover { border-color:var(--ifm-color-primary); text-decoration:none; color:var(--ifm-font-color-base); }`}</style>
+
+<a
+  href="https://docs.google.com/document/d/11wRTr4N7kycnkc5Jh3Yq32vWkGUYfZJQcp0u5UsMxSk/template/preview"
+  target="_blank"
+  className="template-btn"
+>
+  <GDriveIcon /> Problem Brief Template
+</a>

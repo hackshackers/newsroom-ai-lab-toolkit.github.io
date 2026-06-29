@@ -5,7 +5,7 @@ original:
   goal: "editing is faster, more consistent, and aligned with the newsroom's mission"
 notes:
   - "The need bundles several different jobs: diagnosing habits, adapting coaching, and aligning to style guides."
-  - 'Three goals are packed into one "so that" — faster, more consistent, and mission-aligned.'
+  - 'Three goals are packed into one "so that" - faster, more consistent, and mission-aligned.'
   - '"Aligned with the newsroom''s mission" is hard to actually observe in practice.'
 questions:
   - "What is the hardest part for editors right now: identifying the right feedback, phrasing it, tailoring it, or remembering prior coaching?"

@@ -102,7 +102,7 @@ function CombinedProgress({ steps, currentIdx, onStep, isLooping, triggerLoop }:
       {/* Bar + ticks */}
       <div style={{ position:'relative', margin:'6rem 0 0.5rem' }}>
 
-        {/* Loop arc — SVG so a dot can travel the path */}
+        {/* Loop arc - SVG so a dot can travel the path */}
         <svg
           viewBox="0 0 100 60"
           preserveAspectRatio="none"
@@ -131,7 +131,7 @@ function CombinedProgress({ steps, currentIdx, onStep, isLooping, triggerLoop }:
           ))}
         </div>
 
-        {/* Step dots — one per step */}
+        {/* Step dots - one per step */}
         {steps.map((_, i) => (
           <div key={i} style={{ position:'absolute', left:`${stepPct(i)}%`, top:'50%', transform:'translate(-50%, -50%)', width:8, height:8, borderRadius:'50%', background: i < currentIdx ? c.accent : c.paper, border:`1.5px solid ${i <= currentIdx ? c.accent : c.border}`, zIndex:1, pointerEvents:'none', transition:'all 0.2s ease' }} />
         ))}
@@ -139,7 +139,7 @@ function CombinedProgress({ steps, currentIdx, onStep, isLooping, triggerLoop }:
         {/* Start node */}
         <div style={{ position:'absolute', left:'0%', top:'50%', transform:'translate(-50%, -50%)', width:14, height:14, borderRadius:'50%', background:c.accent, border:`2px solid ${c.accent}`, zIndex:2 }} />
 
-        {/* Phase-transition nodes — skip the last boundary (100%) which is the end node */}
+        {/* Phase-transition nodes - skip the last boundary (100%) which is the end node */}
         {segBoundaries.filter(b => b < 100).map((b, i) => {
           const nextPhaseFirstIdx = phaseFirstIdx[i + 1];
           const passed = currentIdx >= nextPhaseFirstIdx;
@@ -150,7 +150,7 @@ function CombinedProgress({ steps, currentIdx, onStep, isLooping, triggerLoop }:
           );
         })}
 
-        {/* End node — triggers loop back to Ideate start */}
+        {/* End node - triggers loop back to Ideate start */}
         <button onClick={triggerLoop} title="Loop back to Ideate · Prototype · Test"
           style={{ position:'absolute', left:'100%', top:'50%', transform:'translate(-50%, -50%)', width:14, height:14, borderRadius:'50%', border:`2px solid ${currentIdx === total - 1 ? c.accent : c.border}`, background: currentIdx === total - 1 ? c.accent : c.paper, transition:'all 0.2s ease', zIndex:2, cursor:'pointer', padding:0 }}
         />
@@ -182,10 +182,10 @@ function CombinedProgress({ steps, currentIdx, onStep, isLooping, triggerLoop }:
 
 
 const STEP_CONTENTS: Array<() => React.ReactNode> = [
-  // 1 — Talk to people
+  // 1 - Talk to people
   () => null,
 
-  // 2 — Refine your understanding
+  // 2 - Refine your understanding
   () => (
     <>
       <div style={{ background:c.surface, border:`1px solid ${c.border}`, borderRadius:'0.75rem', padding:'1.25rem' }}>
@@ -239,7 +239,7 @@ const STEP_CONTENTS: Array<() => React.ReactNode> = [
     </>
   ),
 
-  // 3 — Write the pitch
+  // 3 - Write the pitch
   () => (
     <div style={{ display:'flex', gap:'1rem' }}>
       {['Brief A','Brief B'].map((label, i) => (
@@ -255,7 +255,7 @@ const STEP_CONTENTS: Array<() => React.ReactNode> = [
     </div>
   ),
 
-  // 4 — Choose which story to pursue first
+  // 4 - Choose which story to pursue first
   () => (
     <div style={{ display:'flex', gap:'1rem', alignItems:'flex-start' }}>
       <div style={{ flex:1, background:c.accentSubtle, border:`2px solid ${c.accent}`, borderRadius:'0.75rem', padding:'1rem' }}>
@@ -276,7 +276,7 @@ const STEP_CONTENTS: Array<() => React.ReactNode> = [
     </div>
   ),
 
-  // 5 — Outline the story parts
+  // 5 - Outline the story parts
   () => (
     <div>
       <div style={{ background:c.surface, border:`1px solid ${c.border}`, borderRadius:'0.75rem', padding:'1rem', marginBottom:'1rem' }}>
@@ -305,7 +305,7 @@ const STEP_CONTENTS: Array<() => React.ReactNode> = [
     </div>
   ),
 
-  // 6 — Decide which angle to report on first
+  // 6 - Decide which angle to report on first
   () => (
     <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'0.625rem' }}>
       {['part 1','part 2','part 3','part 4','part 5'].map((p, i) => (
@@ -322,13 +322,13 @@ const STEP_CONTENTS: Array<() => React.ReactNode> = [
     </div>
   ),
 
-  // 7 — Define requirements
+  // 7 - Define requirements
   () => (
     <div style={{ display:'flex', flexDirection:'column', gap:'0.625rem' }}>
       {[
-        { icon:'📥', label:'What inputs does this part need?',        hint:'Name the concrete inputs required — data, sources, context, approvals. Be specific: vague inputs produce vague outputs.' },
+        { icon:'📥', label:'What inputs does this part need?',        hint:'Name the concrete inputs required - data, sources, context, approvals. Be specific: vague inputs produce vague outputs.' },
         { icon:'✅', label:'What does good enough output look like?', hint:'Define quality before building. Can a human reliably evaluate the result and catch errors? What does "good enough" look like?' },
-        { icon:'⚙️', label:'What kind of solution fits?',              hint:'Could be AI, a rules-based tool, a process change, or keeping it fully human. Start with the problem, not the tool — and identify where humans must stay in the loop.' },
+        { icon:'⚙️', label:'What kind of solution fits?',              hint:'Could be AI, a rules-based tool, a process change, or keeping it fully human. Start with the problem, not the tool - and identify where humans must stay in the loop.' },
       ].map(({ icon, label, hint }, i, arr) => (
         <div key={label}>
           <div style={{ background:c.surface, border:`1px solid ${c.border}`, borderRadius:'0.75rem', padding:'1rem' }}>
@@ -345,7 +345,7 @@ const STEP_CONTENTS: Array<() => React.ReactNode> = [
     </div>
   ),
 
-  // 8 — Experiment, build and verify
+  // 8 - Experiment, build and verify
   () => (
     <div style={{ display:'flex', flexDirection:'column', gap:'1.5rem' }}>
       <div>
@@ -401,13 +401,13 @@ const STEP_CONTENTS: Array<() => React.ReactNode> = [
     </div>
   ),
 
-  // 9 — Test
+  // 9 - Test
   () => (
     <div style={{ display:'flex', flexDirection:'column', gap:'0.625rem' }}>
       {[
         { icon:'🙋', label:'Who should you test with?',      hint:'Identify the stakeholders, users, or colleagues whose reaction matters most for this part. Aim for people who reflect real usage, not just internal allies.' },
         { icon:'👀', label:'What are you trying to learn?',  hint:'Define 1–3 specific questions before the session. Are you checking whether the output is accurate? Useful? Trusted? Understandable?' },
-        { icon:'📝', label:'How will you capture what you learn?', hint:'Take notes on what people actually do and say — not just what you hoped they would. Surprises and confusions are the most valuable signal.' },
+        { icon:'📝', label:'How will you capture what you learn?', hint:'Take notes on what people actually do and say - not just what you hoped they would. Surprises and confusions are the most valuable signal.' },
       ].map(({ icon, label, hint }, i, arr) => (
         <div key={label}>
           <div style={{ background:c.surface, border:`1px solid ${c.border}`, borderRadius:'0.75rem', padding:'1rem' }}>
@@ -424,7 +424,7 @@ const STEP_CONTENTS: Array<() => React.ReactNode> = [
     </div>
   ),
 
-  // 10 — Select next part and repeat
+  // 10 - Select next part and repeat
   () => (
     <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'0.625rem' }}>
       {[
@@ -452,21 +452,21 @@ const STEP_CONTENTS: Array<() => React.ReactNode> = [
 ];
 
 const STEPS = [
-  { n:'1', phase:0, title:'Talk to people',                              note:"Like backgrounding a story: notice pain points, talk to people, map sources, gather clues and hunches. No filtering yet — you're building a sense of what's happening before you know the central question." },
-  { n:'2', phase:1, title:'Problem Statements: Clearly define the problem',                   note:"Like finding your nut graf: who is affected, what's at stake, why it matters. Look for patterns in your observations and frame each cluster as a focused statement you could pitch in a meeting." },
-  { n:'3', phase:1, title:'Problem Briefs: Expand your context',                             note:"Like writing a story pitch or memo: add context, who's affected, what success looks like, what still needs reporting. Writing it out tests whether the problem is real and the scope is clear." },
-  { n:'4', phase:1, title:'Choose which brief to tackle first',          note:"Pick one brief and commit. Splitting focus produces worse outcomes for everyone. The brief you don't choose now is a candidate for the next cycle." },
-  { n:'5', phase:1, title:'Break down the problem into smaller parts',            note:"Like outlining a story: break the work into concrete, independently tackable pieces. Each part should be small enough to report, build, and verify quickly." },
-  { n:'6', phase:2, title:'Pick a part of the solution to explore',       note:"It doesn't have to be part 1. Start with the part that will teach you the most, unblock other work, or carries the most uncertainty." },
-  { n:'7', phase:2, title:"Define requirements for this part of the solution", note:"Before drafting, automating, or prototyping anything, pause to define the work clearly enough that a human can judge whether the result is useful, accurate, and safe to use. This step turns a promising idea into something testable." },
-  { n:'8', phase:3, title:"Prototype this part of the solution", note:"TKTKTK" },
-  { n:'9', phase:4, title:'Test with the people the solution is for',        note:"Bring your solution to the stakeholders, users, or colleagues it's meant to serve. Observe how they interact with it, listen to their feedback, and note what surprised you — their reactions are your most reliable signal." },
-  { n:'10', phase:4, title:'Select next part to tackle and repeat the cycle', note:"Once a part of the larger solution is verified to meet user needs move on to tackle the next. Keep going until all parts of the brief are solved." },
+  { n:'1',  phase:0 },
+  { n:'2',  phase:1 },
+  { n:'3',  phase:1 },
+  { n:'4',  phase:1 },
+  { n:'5',  phase:1 },
+  { n:'6',  phase:2 },
+  { n:'7',  phase:2 },
+  { n:'8',  phase:3 },
+  { n:'9',  phase:4 },
+  { n:'10', phase:4 },
 ];
 
 // activePart: 0-indexed part currently being worked on
 // completed: 0-indexed parts finished in prior iterations
-// includeActive: step 10 mode — also mark activePart as solved
+// includeActive: step 10 mode - also mark activePart as solved
 function PartsGrid({ activePart, completed, includeActive }: { activePart: number; completed: number[]; includeActive?: boolean }) {
   const parts = ['Part 1', 'Part 2', 'Part 3'];
   const green = 'oklch(0.50 0.22 158)';
@@ -572,7 +572,7 @@ export default function MethodologyBoard() {
 
           <div style={{ marginTop:'1.5rem' }}>
             {STEPS.map((s, i) => i !== idx ? null : (
-              <Block key={i} n={s.n} total={total} title={i === 9 && isLastStep10 ? 'All parts verified — the full solution is built.' : s.title} note={i === 9 && isLastStep10 ? undefined : s.note} footer={i === 9 && isLastStep10 ? undefined : navFooter}>
+              <Block key={i} n={s.n} total={total} title={i === 9 && isLastStep10 ? 'All parts verified - the full solution is built.' : STEP_DETAILS[i].title} note={i === 9 && isLastStep10 ? undefined : STEP_DETAILS[i].summary} footer={i === 9 && isLastStep10 ? undefined : navFooter}>
                 {(() => {
                   const visual = i === 7 || i === 8 ? null
                     : i === 5 ? <Step6Content activePart={activePart} completed={completedParts} />
@@ -580,7 +580,7 @@ export default function MethodologyBoard() {
                     : STEP_CONTENTS[i]();
                   return (
                     <>
-                      <StepStructuredContent idx={i} />
+                      {!isLastStep10 && <StepStructuredContent idx={i} />}
                       {visual && (
                         <div style={{ marginTop:'1.5rem', paddingTop:'1.5rem', borderTop:`1px solid ${c.border}` }}>
                           {visual}

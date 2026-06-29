@@ -5,7 +5,7 @@ original:
   goal: they can identify important information that other methods miss
 notes:
   - The slash construction packs two slightly different tasks into one need.
-  - '"Important information" is vague — the goal should explain why it matters and connect to a real outcome.'
+  - '"Important information" is vague - the goal should explain why it matters and connect to a real outcome.'
   - Clarifying which OSINT researchers (not just skill level) makes the statement easier to design around.
 improvements:
   - user: Somewhat advanced OSINT researchers investigating conflict zones
