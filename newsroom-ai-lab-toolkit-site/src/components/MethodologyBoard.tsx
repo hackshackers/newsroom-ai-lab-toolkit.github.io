@@ -77,6 +77,9 @@ const PHASE_SPANS = [
   { label: 'Test',      color: 'oklch(0.40 0.18 172)' },
 ];
 
+const DOT_BIG = 16;
+const DOT_SMALL = 8;
+
 function CombinedProgress({ steps, currentIdx, onStep, isLooping, triggerLoop }: { steps: typeof STEPS; currentIdx: number; onStep: (i: number) => void; isLooping: boolean; triggerLoop: () => void }) {
   const total = steps.length;
   const currentPhase = steps[currentIdx].phase;
@@ -133,26 +136,30 @@ function CombinedProgress({ steps, currentIdx, onStep, isLooping, triggerLoop }:
 
         {/* Step dots - one per step */}
         {steps.map((_, i) => (
-          <div key={i} style={{ position:'absolute', left:`${stepPct(i)}%`, top:'50%', transform:'translate(-50%, -50%)', width:8, height:8, borderRadius:'50%', background: i < currentIdx ? c.accent : c.paper, border:`1.5px solid ${i <= currentIdx ? c.accent : c.border}`, zIndex:1, pointerEvents:'none', transition:'all 0.2s ease' }} />
+          <div key={i} style={{ position:'absolute', left:`${stepPct(i)}%`, top:'50%', transform:'translate(-50%, -50%)', width:DOT_SMALL, height:DOT_SMALL, borderRadius:'50%', background: i < currentIdx ? c.accent : c.paper, border:`1.5px solid ${i <= currentIdx ? c.accent : c.border}`, zIndex:1, pointerEvents:'none', transition:'all 0.2s ease' }} />
         ))}
 
-        {/* Start node */}
-        <div style={{ position:'absolute', left:'0%', top:'50%', transform:'translate(-50%, -50%)', width:14, height:14, borderRadius:'50%', background:c.accent, border:`2px solid ${c.accent}`, zIndex:2 }} />
+        {/* Start node - start of Empathize */}
+        <div style={{ position:'absolute', left:'0%', top:'50%', transform:'translate(-50%, -50%)', width:DOT_BIG, height:DOT_BIG, borderRadius:'50%', background:c.accent, border:`2px solid ${c.accent}`, zIndex:2 }} />
 
-        {/* Phase-transition nodes - skip the last boundary (100%) which is the end node */}
+        {/* Phase-transition nodes - skip the last boundary (100%) which is the end node.
+            Only the starts of Define and Iterate (Plan) are top-level labeled phases and get the big-dot treatment;
+            the Prototype/Test boundaries inside "Iterate" stay small. */}
         {segBoundaries.filter(b => b < 100).map((b, i) => {
           const nextPhaseFirstIdx = phaseFirstIdx[i + 1];
           const passed = currentIdx >= nextPhaseFirstIdx;
+          const isLabeledPhaseStart = i === 0 || i === 1;
+          const size = isLabeledPhaseStart ? DOT_BIG : DOT_SMALL;
           return (
             <button key={i} onClick={() => !isLooping && onStep(nextPhaseFirstIdx)} title={`Start of ${PHASE_SPANS[i + 1].label}`}
-              style={{ position:'absolute', left:`${b}%`, top:'50%', transform:'translate(-50%, -50%)', width:16, height:16, borderRadius:'50%', border:`2px solid ${passed ? c.accent : c.border}`, background: passed ? c.accent : c.paper, cursor:'pointer', padding:0, transition:'all 0.2s ease', zIndex:2 }}
+              style={{ position:'absolute', left:`${b}%`, top:'50%', transform:'translate(-50%, -50%)', width:size, height:size, borderRadius:'50%', border:`${isLabeledPhaseStart ? 2 : 1.5}px solid ${passed ? c.accent : c.border}`, background: passed ? c.accent : c.paper, cursor:'pointer', padding:0, transition:'all 0.2s ease', zIndex:2 }}
             />
           );
         })}
 
         {/* End node - triggers loop back to Ideate start */}
         <button onClick={triggerLoop} title="Loop back to Ideate · Prototype · Test"
-          style={{ position:'absolute', left:'100%', top:'50%', transform:'translate(-50%, -50%)', width:14, height:14, borderRadius:'50%', border:`2px solid ${currentIdx === total - 1 ? c.accent : c.border}`, background: currentIdx === total - 1 ? c.accent : c.paper, transition:'all 0.2s ease', zIndex:2, cursor:'pointer', padding:0 }}
+          style={{ position:'absolute', left:'100%', top:'50%', transform:'translate(-50%, -50%)', width:DOT_SMALL, height:DOT_SMALL, borderRadius:'50%', border:`1.5px solid ${currentIdx === total - 1 ? c.accent : c.border}`, background: currentIdx === total - 1 ? c.accent : c.paper, transition:'all 0.2s ease', zIndex:2, cursor:'pointer', padding:0 }}
         />
       </div>
 

@@ -78,6 +78,20 @@ const config: Config = {
         dataDir: path.join(__dirname, 'src/data/problem-statement-benefits'),
       },
     ],
+    [
+      require.resolve('./plugins/load-markdown-data'),
+      {
+        id: 'iteration-tips',
+        dataDir: path.join(__dirname, 'src/data/iteration-tips'),
+      },
+    ],
+    [
+      require.resolve('./plugins/load-markdown-data'),
+      {
+        id: 'waterfall-tricky',
+        dataDir: path.join(__dirname, 'src/data/waterfall-tricky'),
+      },
+    ],
   ],
 
   presets: [

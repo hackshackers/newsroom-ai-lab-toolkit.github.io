@@ -1,30 +1,14 @@
 import React from 'react';
 import { usePluginData } from '@docusaurus/useGlobalData';
 import CarouselShell from './CarouselShell';
+import ProblemStatement, { Statement } from './ProblemStatement';
 
-const u = '#fef08a';
-const n = '#bfdbfe';
-const g = '#bbf7d0';
-
-interface Statement { user: string; verb?: 'need' | 'needs'; need: string; goal: string; note?: string }
 interface ProblemStatementExample {
   original: Statement;
   discussion?: string;
   notes?: string[];
   questions?: string[];
   improvements: Statement[];
-}
-
-function Stmt({ user, verb = 'need', need, goal }: Statement) {
-  return (
-    <p style={{ fontSize: '1rem', lineHeight: 1.7, margin: 0 }}>
-      <span style={{ background: u, padding: '1px 4px', borderRadius: 3 }}>{user}</span>
-      {` ${verb} `}
-      <span style={{ background: n, padding: '1px 4px', borderRadius: 3 }}>{need}</span>
-      {' so that '}
-      <span style={{ background: g, padding: '1px 4px', borderRadius: 3 }}>{goal}</span>.
-    </p>
-  );
 }
 
 const labelStyle: React.CSSProperties = {
@@ -41,7 +25,7 @@ function ExampleCard({ ex }: { ex: ProblemStatementExample }) {
     <>
       <div style={{ marginBottom: '1.25rem' }}>
         <div style={labelStyle}>Original</div>
-        <Stmt {...ex.original} />
+        <ProblemStatement {...ex.original} />
       </div>
 
       {(ex.discussion || ex.notes) && (
@@ -70,7 +54,7 @@ function ExampleCard({ ex }: { ex: ProblemStatementExample }) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
           {ex.improvements.map((imp, i) => (
             <div key={i} style={{ background: '#f9fafb', borderRadius: '0.5rem', padding: '0.75rem' }}>
-              <Stmt {...imp} />
+              <ProblemStatement {...imp} />
               {imp.note && <p style={{ margin: '0.4rem 0 0', fontSize: '0.8rem', color: '#6b7280', fontStyle: 'italic' }}>{imp.note}</p>}
             </div>
           ))}
