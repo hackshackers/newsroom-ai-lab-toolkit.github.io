@@ -3,6 +3,15 @@ import IterationJourneyCarousel from './IterationJourneyCarousel';
 
 const STEPS = [
   {
+    emoji: '📐',
+    label: 'Stakeholder ask',
+    statement: {
+      user: 'The transportation authorities',
+      need: 'a bridge that lets vehicles and pedestrians safely cross the river',
+      goal: 'they can reliably connect both sides of the city for decades to come',
+    },
+  },
+  {
     image: '/img/waterfall_bridge_1.png',
     label: '1. Erection of piers and support spans',
   },

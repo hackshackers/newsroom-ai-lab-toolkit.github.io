@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-sidebar_label: "Task B"
+sidebar_label: "Task A"
 ---
 
-# Task B
+# Task A
