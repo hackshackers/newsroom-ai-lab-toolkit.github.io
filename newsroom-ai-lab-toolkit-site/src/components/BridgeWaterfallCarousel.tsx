@@ -4,7 +4,7 @@ import IterationJourneyCarousel from './IterationJourneyCarousel';
 const STEPS = [
   {
     emoji: '📐',
-    label: 'Stakeholder ask',
+    label: 'Problem Statement',
     statement: {
       user: 'The transportation authorities',
       need: 'a bridge that lets vehicles and pedestrians safely cross the river',

@@ -4,7 +4,7 @@ import IterationJourneyCarousel from './IterationJourneyCarousel';
 const STEPS = [
   {
     emoji: '🖼️',
-    label: 'Stakeholder ask',
+    label: 'Problem Statement',
     statement: {
       user: 'The client',
       verb: 'needs' as const,
