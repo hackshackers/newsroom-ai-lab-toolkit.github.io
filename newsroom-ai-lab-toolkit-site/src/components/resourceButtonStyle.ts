@@ -1,6 +1,6 @@
-import React from 'react';
+import type { CSSProperties } from 'react';
 
-export const resourceButtonStyle: React.CSSProperties = {
+export const resourceButtonStyle: CSSProperties = {
   display: 'flex',
   width: '100%',
   boxSizing: 'border-box',
@@ -9,7 +9,7 @@ export const resourceButtonStyle: React.CSSProperties = {
   alignItems: 'center',
   padding: '0.75rem 1rem',
   background: 'var(--ifm-color-primary)',
-  color: '#fff',
+  color: 'var(--ifm-background-color)',
   border: 'none',
   borderRadius: '0.5rem',
   cursor: 'pointer',
