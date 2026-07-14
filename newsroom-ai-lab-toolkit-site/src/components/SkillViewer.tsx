@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { resourceButtonStyle } from './resourceButtonStyle';
 
 export default function SkillViewer({ url }: { url: string }) {
   const [open, setOpen] = useState(false);
@@ -24,9 +25,9 @@ export default function SkillViewer({ url }: { url: string }) {
 
   return (
     <div style={{ marginTop: '1rem', border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '0.5rem', overflow: 'hidden', fontFamily: 'var(--ifm-font-family-base)' }}>
-      <button onClick={toggle} style={{ width: '100%', textAlign: 'left', padding: '0.75rem 1rem', background: 'var(--ifm-color-primary)', color: '#fff', border: 'none', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontWeight: 700, fontSize: '1rem', fontFamily: 'var(--ifm-font-family-base)' }}>
+      <button onClick={toggle} style={{ ...resourceButtonStyle, borderRadius: 0 }}>
         <span>Use Agent Skill in your preferred tool</span>
-        <span style={{ fontSize: '0.75rem', opacity: 0.7, color: '#fff' }}>{open ? '▲ collapse' : '▼ expand'}</span>
+        <span style={{ fontSize: '0.75rem', color: '#fff' }}>{open ? '▲ collapse' : '▼ expand'}</span>
       </button>
       {open && (
         <div style={{ position: 'relative' }}>
