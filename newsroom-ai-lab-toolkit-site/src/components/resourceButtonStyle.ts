@@ -9,7 +9,7 @@ export const resourceButtonStyle: CSSProperties = {
   alignItems: 'center',
   padding: '0.75rem 1rem',
   background: 'var(--ifm-color-primary)',
-  color: 'var(--ifm-background-color)',
+  color: 'var(--ifm-button-color)',
   border: 'none',
   borderRadius: '0.5rem',
   cursor: 'pointer',
