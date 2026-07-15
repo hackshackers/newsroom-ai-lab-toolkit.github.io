@@ -22,6 +22,18 @@ Choose 3-5 experiences from your shared collection of observations and frame eac
 - As you go through the process you will find places where you need more information - that's good! It highlights where more user research is needed. Go back to the person who shared the original observation to get more clarity.
 - Sometimes the user will be one person. Other times it will be a group. When it is a group, try to make it a specific one.
 
+## Common pitfalls
+
+| Pitfall | How to spot it | Fix |
+| --- | --- | --- |
+| Solutionizing | The need names a tool or technology | Ask "why do you need that?" until you reach the gap |
+| Vanishing user | "The newsroom needs..." - too broad to act on | Make it specific enough to picture one person |
+| Mismatched user and goal | User is a reporter; goal is about revenue | Decide whose problem this is - write two statements if needed |
+| The non-goal | "So that things are more efficient" | Describe something observable - something you could check |
+| Multi-problem problem | The need is a list of three different things | Write a separate statement for each, then prioritize |
+| One level too shallow | Solving the symptom, not the cause | Ask "why is that happening?" before writing the need |
+| The eternal goal | "So that journalism is more trusted" | Scope to something this specific problem could actually move |
+
 ## Examples
 
 <ProblemStatementCarousel />
