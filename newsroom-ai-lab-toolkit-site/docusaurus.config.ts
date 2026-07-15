@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: '[PROTOTYPE] Newsroom AI Lab Playbook',
+  title: '[BETA] Newsroom AI Lab Playbook',
   tagline: 'From many observations → one thing worth exploring → many solvable parts',
   favicon: 'img/hackshackers_logomark.png',
 
@@ -120,7 +120,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: '[PROTOTYPE] Newsroom AI Lab Playbook',
+      title: '[BETA] Newsroom AI Lab Playbook',
       logo: {
         alt: 'Newsroom AI Lab Playbook Logo',
         // src: 'img/logo.svg',

@@ -6,7 +6,7 @@ import GDriveIcon from '@site/src/components/CopyToDrive';
 
 # Setup
 
-<h3><GDriveIcon /> All the templates you'll need as you work through the Playbook are in the form of Google drive files.</h3>
+<h3><GDriveIcon /> All the templates you'll need as you work through the Playbook are in the form of Google Drive files.</h3>
 
 <p>
  We recommend creating a new Drive folder wherever makes most sense for your team to hold your work.

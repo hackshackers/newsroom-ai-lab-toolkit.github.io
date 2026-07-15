@@ -32,7 +32,7 @@ You can capture experiences however works for your team - sticky notes, a shared
 - **Include both problems and opportunities** - frustrations, slowdowns, but also exciting "what if" ideas.
 - If someone gets stuck, encourage them to **reflect on their previous week of work**:
     - When did they get frustrated? What were they trying to do? What got in the way?
-    - Where did they with they had a magic wand to make something seemingly impossible, possibe?
+    - Where did they wish they had a magic wand to make something seemingly impossible, possible?
 :::
 
 :::warning[Reminder: No solutions (yet!)]

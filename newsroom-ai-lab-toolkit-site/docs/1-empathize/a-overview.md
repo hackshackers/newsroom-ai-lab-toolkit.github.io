@@ -7,7 +7,7 @@ pagination_label: "1. Empathize"
 
 # Talk to people
 
-In this stage we focus on collecting a broad mix of real life experiences ***without worrying about what a solution would look like or whether a solution is even possible.***
+In this stage we focus on collecting a broad mix of real-life experiences ***without worrying about what a solution would look like or whether a solution is even possible.***
 
 By the end of this stage, you’ll have a set of real-life, specific experiences from people who do or rely on the work of your newsroom, captured into three categories: 
 
