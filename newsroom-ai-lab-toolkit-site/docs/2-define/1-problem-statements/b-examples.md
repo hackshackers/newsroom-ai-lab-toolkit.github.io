@@ -45,7 +45,7 @@ The worksheet will ask for each piece of information separately, then automatica
 
 Once you have a rough observation or idea, our Problem Statement Coach can help you workshop it into a clear, structured statement.
 
-The coach will ask you questions about who is affected, what they actually need, and why it matters - and push back when something is too vague or bundling too many things together.
+The coach will ask you questions about who is affected, what they actually need, and why it matters - and push back when something is too vague or bundles too many things together.
 
 **What to bring:**
 

@@ -8,7 +8,7 @@ paragraphs:
 cards:
   - icon: Lightbulb
     title: Collaborate with the people doing the work
-    body: "Find out what reporters, edtiors, community members, and partners are actually experiencing - before forming any opinions about what to build."
+    body: "Find out what reporters, editors, community members, and partners are actually experiencing - before forming any opinions about what to build."
   - icon: Target
     title: Don't be a hammer looking for a nail
     body: "Resist the pull toward a specific solution. Define the problem clearly first - the right tool becomes clear once you know what you're actually solving."

@@ -76,7 +76,7 @@ export const STEP_DETAILS: StepDetail[] = [
   {
     title: 'Pick a part of the solution to explore',
     summary:
-      "It doesn't have to be part 1. Start with the part that will teach you the most, unblock other work, or carries the most uncertainty.",
+      "It doesn't have to be part 1. Start with whichever part offers the highest immediate value - either because it unblocks other work, or because it will teach you something important about the problem or what is needed in the solution.",
     outcome: 'One part selected as the focus for this iteration.',
     whatYoullDo:
       'Review your parts and ask: which is the biggest blocker, which carries the most unknowns, which would deliver value fastest? Pick one and make it the focus.',
@@ -107,7 +107,7 @@ export const STEP_DETAILS: StepDetail[] = [
     whatYoullDo:
       'Use whatever tools fit - prompts, spreadsheets, scripts, mockups. Build only what\'s needed to test your requirements. Expect to throw things away.',
     whyItMatters:
-      'A prototype surfaces the real problems with an approach faster and cheaper than a finished build. The goal is to learn more about the problem and possible sotutions. Each iteration gets you closer to a solution that works for the people it\'s meant to serve.',
+      'A prototype surfaces the real problems with an approach faster and cheaper than a finished build. The goal is to learn more about the problem and possible solutions. Each iteration gets you closer to a solution that works for the people it\'s meant to serve.',
   },
 
   // Step 9 - Test with users
@@ -127,7 +127,7 @@ export const STEP_DETAILS: StepDetail[] = [
   {
     title: 'Select next part to tackle and repeat the cycle',
     summary:
-      'Once a part of the larger solution is verified to meet user needs move on to tackle the next. Keep going until all parts of the brief are solved.',
+      'Once a part of the larger solution is verified to meet user needs, move on to tackle the next. Keep going until all parts of the brief are solved.',
     outcome:
       'One part marked complete - or a revised plan for what needs to change. The next part selected if any remain.',
     whatYoullDo:
