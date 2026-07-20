@@ -18,6 +18,22 @@ h1, h2, h3, h4, h5, h6,
   --color-light-grey: #e5e4e9;
 }
 
+/* Hacks/Hackers brand palette - single source of truth for the landing page,
+   site footer, CTA banner, methodology board, and problem statement formula. */
+:root {
+  --hh-paper: oklch(0.99 0.01 0);
+  --hh-ink: oklch(0.18 0.01 180);
+  --hh-primary-text: oklch(0.30 0.01 180);
+  --hh-secondary-text: oklch(0.48 0.01 180);
+  --hh-border: oklch(0.92 0.008 90);
+  --hh-surface-subtle: oklch(0.96 0.006 90);
+  --hh-accent: rgb(11, 118, 23);
+  --hh-accent-subtle: color-mix(in oklch, var(--hh-accent) 10%, var(--hh-paper));
+  --font-display: 'Chakra Petch', sans-serif;
+  --font-editorial: 'Fraunces', serif;
+  --font-ui: 'Geist', sans-serif;
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #3c3946;
@@ -27,6 +43,7 @@ h1, h2, h3, h4, h5, h6,
   --ifm-color-primary-light: #43404f;
   --ifm-color-primary-lighter: #484554;
   --ifm-color-primary-lightest: #565365;
+  --ifm-font-family-base: var(--font-ui);
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
