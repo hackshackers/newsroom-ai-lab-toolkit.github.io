@@ -51,7 +51,10 @@ const config: Config = {
       tagName: 'link',
       attributes: {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap',
+        // Single source for all 3 brand fonts. Chakra Petch weights (400/600/700) match the
+        // landing page heading/navbar per the brand guide; Fraunces/Geist weights cover actual
+        // usage across MethodologyBoard, NewsroomLandingPage, ObservationExamples, SiteFooter, CtaBanner.
+        href: 'https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Geist:wght@400;500;600;700&display=swap',
       },
     },
   ],
@@ -118,6 +121,7 @@ const config: Config = {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
+      disableSwitch: true,
     },
     navbar: {
       title: '[BETA] Newsroom AI Lab Playbook',
@@ -132,6 +136,11 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Playbook',
+        },
+        {
+          href: 'https://www.hackshackers.com/tag/newsroom-ai-lab/',
+          label: 'Blog',
+          position: 'left',
         },
       ],
     },

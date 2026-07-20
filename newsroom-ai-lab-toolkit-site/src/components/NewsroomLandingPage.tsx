@@ -43,23 +43,6 @@ export default function NewsroomLandingPage() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
-
-        :root {
-          --hh-paper: oklch(0.99 0.005 90);
-          --hh-ink: oklch(0.18 0.01 180);
-          --hh-primary-text: oklch(0.30 0.01 180);
-          --hh-secondary-text: oklch(0.48 0.01 180);
-          --hh-border: oklch(0.92 0.008 90);
-          --hh-surface-subtle: oklch(0.96 0.006 90);
-          --hh-accent: oklch(0.50 0.24 158);
-          --font-display: 'Chakra Petch', sans-serif;
-          --font-editorial: 'Fraunces', serif;
-          --font-ui: 'Geist', sans-serif;
-        }
-
         @keyframes blink {
           0%, 50% { opacity: 1; }
           51%, 100% { opacity: 0; }
@@ -89,7 +72,7 @@ export default function NewsroomLandingPage() {
       <div className="landing-container" style={{ minHeight: '100vh', backgroundColor: 'var(--hh-paper)' }}>
 
         {/* Hero */}
-        <section style={{ backgroundColor: 'var(--hh-ink)', color: 'var(--hh-paper)', padding: '5rem 1.5rem 3rem' }}>
+        <section style={{ backgroundColor: 'var(--hh-ink)', color: 'var(--hh-paper)', padding: '5rem 1.5rem 2.5rem' }}>
           <div style={{ maxWidth: '64rem', margin: '0 auto' }}>
             <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1.5rem', lineHeight: '1.2', fontFamily: 'var(--font-display)' }}>
               <MD>{hero.headline}</MD>
@@ -101,7 +84,7 @@ export default function NewsroomLandingPage() {
         </section>
 
         {/* Our Approach */}
-        <section style={{ padding: '4rem 1.5rem', backgroundColor: 'var(--hh-surface-subtle)' }}>
+        <section style={{ padding: '2.5rem 1.5rem 2rem', backgroundColor: 'var(--hh-surface-subtle)' }}>
           <div style={{ maxWidth: '64rem', margin: '0 auto' }}>
             <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '2rem', fontFamily: 'var(--font-display)', color: 'var(--hh-ink)' }}>
               <span style={{ color: 'var(--hh-accent)', fontWeight: '500' }}>/ </span>{approach.heading}
@@ -111,11 +94,14 @@ export default function NewsroomLandingPage() {
                 <p key={i}><MD>{p}</MD></p>
               ))}
             </div>
+            {approach.bold && (
+              <strong style={{ fontFamily: 'var(--font-display)', color: 'var(--hh-ink)', display: 'block', fontSize: '1.125rem', marginBottom: '0.75rem' }}><MD>{approach.bold}</MD></strong>
+            )}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '3rem', paddingTop: '1.5rem' }}>
               {approach.cards?.map((card: any, i: number) => (
                 <div key={card.title}>
-                  <p style={{ fontFamily: 'var(--font-display)', fontSize: '3.5rem', fontWeight: '300', lineHeight: 1, marginBottom: '1.25rem', color: 'var(--hh-ink)' }}>
-                    {i + 1}<span style={{ color: 'var(--hh-accent)' }}>/</span>
+                  <p style={{ fontFamily: 'var(--font-display)', fontSize: '2.5rem', fontWeight: '300', lineHeight: 1, marginBottom: '1rem', color: 'var(--hh-ink)' }}>
+                    {i + 1}/
                   </p>
                   <h3 style={{ fontWeight: '700', fontSize: '1.125rem', marginBottom: '0.75rem', fontFamily: 'var(--font-display)', color: 'var(--hh-ink)' }}>{card.title}</h3>
                   <p style={{ fontFamily: 'var(--font-editorial)', fontSize: '1rem', lineHeight: '1.7', color: 'var(--hh-secondary-text)', margin: 0 }}><MD>{card.body}</MD></p>
@@ -126,8 +112,8 @@ export default function NewsroomLandingPage() {
         </section>
 
         {/* Credibility + Partners */}
-        <section style={{ backgroundColor: 'var(--hh-paper)', color: 'var(--hh-ink)' }}>
-          <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '3.5rem 1.5rem 1rem' }}>
+        <section style={{ backgroundColor: 'var(--hh-surface-subtle)', color: 'var(--hh-ink)', padding: '1.5rem 1.5rem 0' }}>
+          <div style={{ maxWidth: '64rem', margin: '0 auto', paddingBottom: '1rem' }}>
             <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '2rem', fontFamily: 'var(--font-display)', color: 'var(--hh-ink)' }}>
               <span style={{ color: 'var(--hh-accent)', fontWeight: '500' }}>/ </span>{credibility.heading}
             </h2>
@@ -139,7 +125,7 @@ export default function NewsroomLandingPage() {
             </div>
           </div>
           {credibility.partners?.length > 0 && (
-            <div style={{ backgroundColor: 'var(--hh-ink)', paddingTop: '1.25rem' }}>
+            <div style={{ backgroundColor: 'var(--hh-ink)', paddingTop: '1.25rem', margin: '0 -1.5rem' }}>
               <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
                 <p style={{ fontFamily: 'var(--font-display)', fontSize: '0.75rem', fontWeight: '600', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'color-mix(in oklch, var(--hh-paper) 75%, transparent)', margin: 0 }}>
                   Partner newsrooms

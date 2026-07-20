@@ -3,7 +3,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { STEP_DETAILS } from './MethodologyBoard.content';
 
 const CSS = `
-  @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&display=swap');
   .mb-page { padding: 2.5rem 1.25rem; }
   @media (min-width: 768px) { .mb-page { padding-left: 3rem; padding-right: 3rem; } }
   .mb-nav-btn { transition: opacity 0.15s, background 0.15s, border-color 0.15s, color 0.15s; }
@@ -18,14 +17,14 @@ const Cp: React.CSSProperties = { fontFamily: "'Chakra Petch', sans-serif" };
 const Fr: React.CSSProperties = { fontFamily: "'Fraunces', serif" };
 const Gs: React.CSSProperties = { fontFamily: "'Geist', sans-serif" };
 const c = {
-  paper:        'oklch(0.99 0.005 90)',
-  ink:          'oklch(0.18 0.01 180)',
-  text:         'oklch(0.30 0.01 180)',
-  textSec:      'oklch(0.48 0.01 180)',
-  border:       'oklch(0.92 0.008 90)',
-  surface:      'oklch(0.96 0.006 90)',
-  accent:       'oklch(0.50 0.24 158)',
-  accentSubtle: 'color-mix(in oklch, oklch(0.50 0.24 158) 10%, oklch(0.99 0.005 90))',
+  paper:        'var(--hh-paper)',
+  ink:          'var(--hh-ink)',
+  text:         'var(--hh-primary-text)',
+  textSec:      'var(--hh-secondary-text)',
+  border:       'var(--hh-border)',
+  surface:      'var(--hh-surface-subtle)',
+  accent:       'var(--hh-accent)',
+  accentSubtle: 'var(--hh-accent-subtle)',
 };
 
 
@@ -476,9 +475,9 @@ const STEPS = [
 // includeActive: step 10 mode - also mark activePart as solved
 function PartsGrid({ activePart, completed, includeActive }: { activePart: number; completed: number[]; includeActive?: boolean }) {
   const parts = ['Part 1', 'Part 2', 'Part 3'];
-  const green = 'oklch(0.50 0.22 158)';
-  const greenBg = 'color-mix(in oklch, oklch(0.50 0.22 158) 12%, oklch(0.99 0.005 90))';
-  const greenBar = 'color-mix(in oklch, oklch(0.50 0.22 158) 30%, white)';
+  const green = c.accent;
+  const greenBg = 'color-mix(in oklch, var(--hh-accent) 12%, var(--hh-paper))';
+  const greenBar = 'color-mix(in oklch, var(--hh-accent) 30%, white)';
   const completedSet = new Set(completed);
   return (
     <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'0.625rem' }}>
