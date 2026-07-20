@@ -136,6 +136,11 @@ const config: Config = {
           position: 'left',
           label: 'Playbook',
         },
+        {
+          href: 'https://www.hackshackers.com/tag/newsroom-ai-lab/',
+          label: 'Blog',
+          position: 'left',
+        },
       ],
     },
     footer: {
